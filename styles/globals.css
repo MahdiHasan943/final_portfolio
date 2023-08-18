@@ -1,0 +1,175 @@
+
+/* font-thin: This class sets the font-weight to 100.
+font-extralight: This class sets the font-weight to 200.
+font-light: This class sets the font-weight to 300.
+font-normal: This class sets the font-weight to 400.
+font-medium: This class sets the font-weight to 500.
+font-semibold: This class sets the font-weight to 600.
+font-bold: This class sets the font-weight to 700.
+font-extrabold: This class sets the font-weight to 800.
+font-black: This class sets the font-weight to 900.
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Foldit', cursive;
+font-family: 'Sofia Sans', sans-serif;
+font-family: 'Volkhov', serif;
+font-family: 'Arimo', sans-serif;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Foldit:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,700;0,900;1,100;1,700;1,900&family=Sofia+Sans:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  background-color: white;
+}
+.tuoches{
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+}
+.nav__link {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.025em;
+}
+.nav__brand {
+  text-transform: capitalize;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+.nav__toggler {
+  display: none;
+}
+.line1{
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: gray;
+  transition: 0.2s ease-in;
+}
+.line3{
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: gray;
+  transition: 0.2s ease-in;
+}
+.line2{
+  width: -1.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: gray;
+  margin-left: auto;
+  transition: 0.2s ease-in;
+}
+.HideForSm{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_bg{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+    padding-bottom: 20px;
+    display: block!important;
+    /* background: rgb(0, 33, 65); */
+    background: linear-gradient(270deg,#f06449,#ef3636);  flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transform: translateX(100%) !important;
+    transition: 0.3s ease-in;
+  }
+  .HideForSm{
+    display: flex;
+  }
+  .lato{
+    font-family: "Lato";
+    font-weight:700;
+  }
+  .nav__activeb{
+    transform: translateX(0%) !important;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+ .nav__link{
+  color: white!important;
+ }
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+    padding-bottom: 20px;
+    /* background: rgb(0, 33, 65); */
+    background: linear-gradient(270deg,#235aa6,#101b3b);
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transform: translateX(100%) !important;
+  }
+  
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(0%) !important;
+}
+.line2{
+  width: 1.5rem;
+}
+/* Toggle Icon Animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+}
+
+.nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  position: sticky;
+}
+
+/* contex style */
+.sectionsPadding {
+    @apply px-4 sm:px-16 py-10;
+  }
+/* context style */
