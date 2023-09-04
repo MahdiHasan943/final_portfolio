@@ -124,6 +124,7 @@ font-family: 'Arimo', sans-serif;
     display: block;
     cursor: pointer;
   }
+
   .nav__menu {
     position: fixed;
     top: 0;
@@ -135,9 +136,16 @@ font-family: 'Arimo', sans-serif;
     background: linear-gradient(270deg,#235aa6,#101b3b);
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
     gap: 30px;
     transform: translateX(100%) !important;
   }
+  /* .nav__link{
+    text-align: start!important;
+  } */
   
 }
 /* Active Class */
@@ -178,4 +186,15 @@ font-family: 'Arimo', sans-serif;
   height: 100vh;
   overflow: hidden;
  
+}
+.aboutBt{
+  
+  letter-spacing: 3px;
+  padding: 12px 20px;
+  background-color: #f06449;
+  background: linear-gradient(270deg,#f06449,#ef3636);
+  color: #fff;
+  position: relative;
+  transition: all .3s;
+
 }

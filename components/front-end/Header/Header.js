@@ -46,6 +46,28 @@ function Header() {
 
   if (!mounted) return null;
   const currentTheme = theme === "system" ? systemTheme : theme;
+  const navLink = [
+    {
+      "title": "Case Studies",
+      "ref": "",
+      "activeColor":"Cse",
+    },
+    {
+      "title": "          Experiments      ",
+      "ref": "",
+      "activeColor":"Experiments",
+    },
+    {
+      "title": "Skills",
+      "ref": "",
+      "activeColor":"Skills",
+    },
+    {
+      "title": "          Contact      ",
+      "ref": "",
+      "activeColor":"Contact",
+    },
+  ]
 
   const menu = (
     <React.Fragment>
@@ -55,107 +77,49 @@ function Header() {
 </svg>
         </a>
    
+      
+      {
+        navLink.map(nav => (
+          
         <li className="  nav__item item">
         <Link
           href={''}
           onClick={() => {
             navToggle();
-            setColor('Cse');
+            setColor(nav?.activeColor);
           }}
           className={`${
-            color === 'Cse'
+            color === nav?.activeColor
               ? "  group text-[#b0b2c3]  transition-all duration-300 ease-in-out "
               : "text-[#b0b2c3]"
           } nav__link`}
-        >
-                    Case Studies
+        >{nav.title}
 
           <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
         </Link>
       </li>
-      <li className="  nav__item item">
-        <Link
-          href={''}
-          onClick={() => {
-            navToggle();
-            setColor('Experiments');
-          }}
-          className={`${
-            color === 'Experiments'
-              ? "  group text-[#b0b2c3] transition-all duration-300 ease-in-out "
-              : "text-[#b0b2c3]"
-          } nav__link`}
-        >
-          Experiments
-          <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
-        </Link>
-      </li>
-      <li className="  nav__item item">
-        <Link
-          href={''}
-          onClick={() => {
-            navToggle();
-            setColor('Skills');
-          }}
-          className={`${
-            color === 'Skills'
-              ? "  group text-[#b0b2c3] transition-all duration-300 ease-in-out "
-              : "text-[#b0b2c3]"
-          } nav__link`}
-        >
-          Skills
-          <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
-        </Link>
-      </li>
-      <li className="  nav__item item">
-        <Link
-          href={''}
-          onClick={() => {
-            navToggle();
-            setColor('Men');
-          }}
-          className={`${
-            color === 'Men'
-              ? "  group text-[#b0b2c3] transition-all duration-300 ease-in-out "
-              : "text-[#b0b2c3]"
-          } nav__link`}
-        >
-          Men
-          <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
-        </Link>
-      </li>
-    
-      <li className=" nav__item item">
-        <a
-          href="#Contact"
-          onClick={() => {
-            navToggle();
-            setColor("people");
-          }}
-          className={`${
-            color === "people"
-              ? "    group text-[#b0b2c3] transition-all duration-300 ease-in-out      "
-              : "text-[#b0b2c3]"
-          } nav__link`}
-        >
-          Contact
-          <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
-        </a>
-      </li>
-      <div className="flex justify-center px-6">
+        ))
+      }
+  
+      <div className="flex justify-center mt-[-10px] px-6">
           {currentTheme === "dark" ? (
             <button className="" onClick={() => setTheme("light")}>
             
               <img
                
                 className="origin-center  w-[30px] h-[30px]"
-                src="/images/mon.png"
+                src="/images/LIGHT.png"
                 alt=""
               />
             </button>
           ) : (
             <button className="" onClick={() => setTheme("dark")}>
-<svg className="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.919 285.919"><path d="M142.959 0C64.131 0 0 64.132 0 142.96s64.131 142.959 142.959 142.959 142.96-64.131 142.96-142.959S221.787 0 142.959 0zm0 260.919V25c65.043 0 117.96 52.917 117.96 117.96 0 65.043-52.917 117.959-117.96 117.959z"></path></svg>
+               <img
+               
+               className="origin-center  w-[30px] h-[30px]"
+               src="/images/icons8-dark-mode-30.png"
+               alt=""
+             />
             </button>
           )}
         </div>
@@ -166,11 +130,12 @@ function Header() {
   
     <motion.nav  variants={navVariants} initial="hidden" whileInView="show" className="overflow-hidden mb-[-180px]   w-full py-12  sectionsPadding nav">
       <div className="flex w-full 2xl:w-[auto] md:justify-between 2xl:justify-center">
-        <a href="#" className="flex items-center  nav__brand">
+        <a href="#" className="flex   nav__brand">
         
-        <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-  <text x="20" y="60" font-family="Arial" font-size="60" fill="none" stroke="white" stroke-width="4">m</text>
-</svg>
+        <svg width="200" className="pt-3 md:pt-0" height="100" xmlns="http://www.w3.org/2000/svg">
+  <text x="20" y="60" font-family="Arial" font-size="60" fill="#4c4f65" stroke="white" stroke-width="4">m</text>
+          </svg>
+
         </a>
     
         
