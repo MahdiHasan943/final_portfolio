@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="mother sectionsPadding bg-[white] dark:bg-[#000]  z-[100000px]">
+      <div className="relative mother sectionsPadding bg-[white] dark:bg-[#000]  z-[100000px]">
         <div className="grid grid-cols-4 h-[200px]   absolute top-0 ">
         <img src="/images/1.png" data-speed="15" className='layer Img' alt="icon"      />
         <img src="/images/2.png" data-speed="5" className='layer Img' alt="icon"      />
@@ -33,14 +33,15 @@ export default function Home() {
         <div className="col-span-2 ">
             <img src="/images/5.png" data-speed="30" className='layer mt-[-30px] w-[300px]' alt="icon" />
             
-            <div className="mt-[-150px] flex justify-center">
-              <div className="">
-              <h1 className=' font-bold text-[80px] font-Arimo leading-[90px] '> Mahdi Hasan</h1>
-              <p className='font-lato italic my-10 text-[24px] leading-[30px]'> Interactive Front-end Developer</p>
+            <div className=" absolute w-full z-50 mt-[-150px] ">
+              <div className="sm:pl-[100px]">
+              <h1 className=' font-bold text-[80px] text-[#4c4f65] dark:text-white font-Arimo leading-[90px] '> Mahdi Hasan</h1>
+              <p className='font-lato italic my-10 text-[#4c4f65] dark:text-white text-[24px] leading-[30px]'> Interactive Front-end Developer</p>
               <button className='aboutBt font-Arimo font-extraboldbold text-[20px]'>About Me</button>
              </div>
             </div>
-
+           
+          
             
           </div>
           
@@ -55,12 +56,14 @@ export default function Home() {
         <img src="/images/6.png" data-speed="-2" className='layer' alt="icon"      />
 
         <img src="/images/12.png" data-speed="5" className='layer' alt="icon"      />
-      </div>  
+        </div>  
+        <div className="absolute w-full h-[100vh] flex justify-center items-center">
+              <img className='w-[280px] z-[10]  ml-[-400px] sm:w-[500px]' src="/images/logo-no-background.svg" alt="" />
+            </div>      
       
     </div>
    
-    <svg xmlns="http://www.w3.org/2000/svg" className='my-20' width="37.196" height="32.213" viewBox="0 0 37.196 32.213"><symbol id="triangle"><svg xmlns="http://www.w3.org/2000/svg" width="25.675" height="22.236" viewBox="0 0 25.675 22.236"><path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10" d="M12.837 3l5.12 8.868 5.12 8.868H2.597l5.12-8.868z"></path></svg></symbol></svg>
-      
+   
 </>  
   );
 }
