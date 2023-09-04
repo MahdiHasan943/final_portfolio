@@ -1,4 +1,3 @@
-'use client'
 import Footer from '@/components/front-end/Footer/Footer'
 import Header from '@/components/front-end/Header/Header'
 import '@/styles/globals.css'
