@@ -48,7 +48,7 @@ function Header() {
   const currentTheme = theme === "system" ? systemTheme : theme;
   const navLink = [
     {
-      "title": "Case Studies",
+      "title": "CaseStudies",
       "ref": "",
       "activeColor":"Cse",
     },
@@ -62,6 +62,7 @@ function Header() {
       "ref": "",
       "activeColor":"Skills",
     },
+    
     {
       "title": "          Contact      ",
       "ref": "",
@@ -71,11 +72,14 @@ function Header() {
 
   const menu = (
     <React.Fragment>
-      <a href="/" className="flex HideForSm items-center gap-4 lg:ml-[80px] nav__brand">
-         
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 172 172" style={{ fill: "#26e07f" }}>
-</svg>
+     <a href="#" className="flex justify-start ml-[-20px] HideForSm   nav__brand">
+        
+        <svg width="200" className="pt-3 md:pt-0" height="100" xmlns="http://www.w3.org/2000/svg">
+  <text x="20" y="60" font-family="Arial" font-size="60" fill="#4c4f65" stroke="white" stroke-width="4">m</text>
+          </svg>
+
         </a>
+    
    
       
       {
@@ -92,7 +96,7 @@ function Header() {
             color === nav?.activeColor
               ? "  group text-[#b0b2c3]  transition-all duration-300 ease-in-out "
               : "text-[#b0b2c3]"
-          } nav__link`}
+          } nav__link  `}
         >{nav.title}
 
           <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
@@ -100,10 +104,11 @@ function Header() {
       </li>
         ))
       }
+    
   
-      <div className="flex justify-center mt-[-10px] px-6">
+    
           {currentTheme === "dark" ? (
-            <button className="" onClick={() => setTheme("light")}>
+            <button className="w-[50px] h-[50px]" onClick={() => setTheme("light")}>
             
               <img
                
@@ -113,7 +118,7 @@ function Header() {
               />
             </button>
           ) : (
-            <button className="" onClick={() => setTheme("dark")}>
+            <button className="w-[50px] h-[50px]" onClick={() => setTheme("dark")}>
                <img
                
                className="origin-center  w-[30px] h-[30px]"
@@ -122,13 +127,13 @@ function Header() {
              />
             </button>
           )}
-        </div>
+      
     </React.Fragment>
   );
 
   return (
   
-    <motion.nav  variants={navVariants} initial="hidden" whileInView="show" className="overflow-hidden mb-[-180px]   w-full py-12  sectionsPadding nav">
+    <motion.nav  variants={navVariants} initial="hidden" whileInView="show" className="overflow-hidden mb-[-180px]  px-4  w-full sm:py-4  nav">
       <div className="flex w-full 2xl:w-[auto] md:justify-between 2xl:justify-center">
         <a href="#" className="flex   nav__brand">
         
