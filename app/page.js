@@ -88,11 +88,11 @@ export default function Home() {
 
             <div className=" absolute w-full z-50 mt-[-50px] sm:mt-[-150px] ">
               <div className="sm:pl-[100px]">
-                <h1 className=" font-bold text-[50px]  sm:text-[80px] text-[#4c4f65] dark:text-white font-Arimo leading-[90px] ">
+                <h1 className=" font-bold text-[50px]  sm:text-[80px] text-[#4c4f65]  dark:text-white font-Arimo leading-[90px] ">
                   {" "}
                   Mahdi Hasan
                 </h1>
-                <p className="font-lato italic pb-5 sm:pb-0  sm:my-10 text-[#4c4f65] dark:text-white text-[24px] leading-[30px]">
+                <p className="font-lato italic pb-5 sm:pb-0  sm:my-10 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
                   {" "}
                   Interactive Front-end Developer
                 </p>
@@ -360,7 +360,7 @@ export default function Home() {
   <motion.svg
   variants={svgVariants}
   initial="hidden"
-            animate="visible"
+            whileInView="visible"
 
   className="w-[400px] z-[10 ml-[-0px] sm:ml-[-100px] lg:ml-[-200px] 2xl:ml-[-300px] sm:w-[700px]"
   xmlns="http://www.w3.org/2000/svg"
@@ -371,7 +371,7 @@ export default function Home() {
     fill="none"
     d="M20 60 L30 30 L40 60 L50 30 L60 60"
               
-              stroke={currentTheme === "dark" ? "#22376a" : "#7391bf"}
+              stroke={currentTheme === "dark" ? "#22376a" : "#7294c2"}
 
     stroke-width="12" 
     stroke-linecap="round"
@@ -380,7 +380,7 @@ export default function Home() {
     variants={pathVariants}
     fill="none"
     d="M30 60 L40 30 L50 60 L60 30 L70 60"
-    stroke={currentTheme === "dark" ? "#22376a" : "#7391bf"}
+    stroke={currentTheme === "dark" ? "#22376a" : "#7294c2"}
     stroke-width="12" 
     stroke-linecap="round"
   />

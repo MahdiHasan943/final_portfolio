@@ -72,13 +72,13 @@ function Header() {
 
   const menu = (
     <React.Fragment>
-     <a href="#" className="flex justify-start ml-[-20px] HideForSm   nav__brand">
+     {/* <a href="#" className="flex justify-start ml-[-20px] HideForSm   nav__brand">
         
         <svg width="200" className="pt-3 md:pt-0" height="100" xmlns="http://www.w3.org/2000/svg">
   <text x="20" y="60" font-family="Arial" font-size="60" fill="#4c4f65" stroke="white" stroke-width="4">m</text>
           </svg>
 
-        </a>
+        </a> */}
     
    
       
