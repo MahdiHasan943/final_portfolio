@@ -198,3 +198,7 @@ font-family: 'Arimo', sans-serif;
   transition: all .3s;
 
 }
+.main-about:hover .aboutArrow{
+  transform: translateX(10px); /* Move the element 15 pixels to the right on hover */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}

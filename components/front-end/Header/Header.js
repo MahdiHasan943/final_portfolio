@@ -94,8 +94,8 @@ function Header() {
           }}
           className={`${
             color === nav?.activeColor
-              ? "  group text-[#b0b2c3]  transition-all duration-300 ease-in-out "
-              : "text-[#b0b2c3]"
+              ? "  group text-[#333335] dark:text-white transition-all duration-300 ease-in-out "
+              : "text-[#333335] dark:text-white "
           } nav__link  `}
         >{nav.title}
 
