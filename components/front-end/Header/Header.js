@@ -1,10 +1,9 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-
+import { textVariant2,textVariant ,navVariants,staggerContainer} from "@/utils/motion/motion";
 import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
-import { navVariants } from "@/utils/motion/motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
@@ -85,7 +84,7 @@ function Header() {
       {
         navLink.map(nav => (
           
-        <li className="  nav__item item">
+        <motion.li variants={textVariant2} initial="hidden" whileInView="show" className="  nav__item item">
         <Link
           href={''}
           onClick={() => {
@@ -101,14 +100,20 @@ function Header() {
 
           <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
         </Link>
-      </li>
+      </motion.li>
         ))
       }
     
   
     
           {currentTheme === "dark" ? (
-            <button className="w-[50px] h-[50px]" onClick={() => setTheme("light")}>
+        <button className="w-[50px] h-[50px]" onClick={() => {
+          
+          setTheme("light")
+          navToggle();
+        }
+        }
+        >
             
               <img
                
@@ -118,7 +123,11 @@ function Header() {
               />
             </button>
           ) : (
-            <button className="w-[50px] h-[50px]" onClick={() => setTheme("dark")}>
+          <button className="w-[50px] h-[50px]" onClick={() => {
+            setTheme("dark")
+            navToggle();
+
+          }}>
                <img
                
                className="origin-center  w-[30px] h-[30px]"
@@ -150,8 +159,8 @@ function Header() {
          
         
          </div> 
-              <ul className={icon === 'nav__toggler' ? `transition duration-[300ms]   ${active}` : `transition duration-[1000ms]   delay-400  ${active}`}>{menu}
-        </ul>
+              <motion.ul variants={staggerContainer} className={icon === 'nav__toggler' ? `transition duration-[300ms]   ${active}` : `transition duration-[1000ms]   delay-400  ${active}`}>{menu}
+        </motion.ul>
 </div>
 
 
