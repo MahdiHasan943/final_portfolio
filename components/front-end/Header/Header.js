@@ -142,7 +142,7 @@ function Header() {
 
   return (
   
-    <motion.nav  variants={navVariants} initial="hidden" whileInView="show" className="overflow-hidden mb-[-180px]  px-4  w-full sm:py-4  nav">
+    <motion.nav   className="overflow-hidden mb-[-180px]  px-4  w-full sm:py-4  nav">
       <div className="flex w-full 2xl:w-[auto] md:justify-between 2xl:justify-center">
         <a href="#" className="flex   nav__brand">
         
