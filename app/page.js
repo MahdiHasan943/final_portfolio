@@ -9,6 +9,7 @@ import CaseStudies from "@/components/front-end/CaseStudies/CaseStudies";
 import Experiments from "@/components/front-end/Experiments/Experiments";
 import Skills from "@/components/front-end/Skills/Skills";
 import Contact from "@/components/front-end/Contact/Contact";
+import PopupForm from "@/components/front-end/about/PopupForm ";
 const svgVariants = {
   hidden: { rotate: -180 },
   visible: {
@@ -34,7 +35,11 @@ const pathVariants = {
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleAboutClick = () => {
+    setIsOpen(!isOpen);
+  };
   useEffect(() => {
     setTimeout(() => {
       setLoading(false); // Set loading to false after 500ms delay
@@ -64,6 +69,7 @@ export default function Home() {
     <>
       <SkeletonTheme baseColor={`#fff`} highlightColor={`#444`}>
         <div className="relative mother sectionsPadding bg-[white] dark:bg-[#000]  z-[100000px]">
+        <PopupForm isOpen={isOpen} onClose={handleAboutClick} />
           <div className="grid grid-cols-4 h-[200px]   absolute top-0 ">
             <img
               src="/images/1.png"
@@ -117,7 +123,7 @@ export default function Home() {
                   </p>
                   <div className="">
                     <div className="relative main-about inline ">
-                      <button className="aboutBt font-Arimo font-extraboldbold text-[20px]">
+                      <button onClick={handleAboutClick} className="aboutBt font-Arimo font-extraboldbold text-[20px]">
                         About Me
                       </button>
                       <svg
@@ -143,6 +149,7 @@ export default function Home() {
                           ></path>{" "}
                         </g>
                       </svg>
+                     
                     </div>
                   </div>
                 </div>
@@ -285,6 +292,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
       </SkeletonTheme>
       <CaseStudies />
       <Experiments />
