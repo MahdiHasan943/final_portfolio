@@ -76,11 +76,10 @@ font-family: 'Arimo', sans-serif;
   transition: 0.2s ease-in;
 }
 .line2{
-  width: -1.5rem;
+  width: 2.5rem;
   height: 0.2rem;
   margin: 0.4rem;
   background: gray;
-  margin-left: auto;
   transition: 0.2s ease-in;
 }
 .HideForSm{
@@ -152,9 +151,9 @@ font-family: 'Arimo', sans-serif;
 .nav__active {
   transform: translateX(0%) !important;
 }
-.line2{
+/* .line2{
   width: 1.5rem;
-}
+} */
 /* Toggle Icon Animation */
 .toggle .line1 {
   transform: rotate(-45deg) translate(-4px, 5px);

@@ -12,28 +12,28 @@ const PopupForm = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="popup-form   z-[100000] py-10 gap-4 h-[100%]  absolute   left-0  w-full  my-auto "
+          className="popup-form   z-[100000] py-10  gap-4 h-[100%]  absolute   left-0  w-full  my-auto "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-          <div className=" flex  flex-col-reverse sm:flex-none   z-[100000]  sm:grid grid-cols-2  h-full  w-[100vw] sm:w-[95%] mx-auto">
+          <div className=" flex   flex-col-reverse sm:flex-none   z-[100000]  sm:grid grid-cols-2  h-full  w-[100vw] sm:w-[95%] mx-auto">
             <motion.div
-              className="left-section relative bg-[#f2f2f2] shadow-summery z-50  h-full"
+              className="left-section relative bg-[#f2f2f2] shadow-summery h-full sm:mt-[100px] sm:h-[600px] z-50 "
               initial={{ y: '-100%' }}
               animate={{ y: '0%', transition: { delay: 0.2, duration: 0.3 } }}
             >
-              {/* <p className='text-[#e8e6e6f7] text-[150px] z-0 font-sofia font-bold  text-right right-0'>About</p> */}
-              <div className="px-4 sm:px-8   z-[100000]  absolute top-0 lg:px-20  py-20">
+           
+              <div className="px-4 sm:px-8 bg-[#f2f2f2]   z-[100000]  absolute top-0 lg:px-20  py-20">
                 <p className='text-[#202128] font-bold capitalize text-[28px] font-popping'>About me.</p>
                 <p className='text-[#76777b] font-semibold  text-[14px] font-popping'> Interactive Front-end developer.</p>
-                <p className='text-[#76777b] font-semibold  text-[15px] leading-[25px]  font-popping pt-5 pb-4'>
+                <p className='text-[#76777b] font-semibold  text-[16px] leading-[30px]  font-popping pt-5 pb-4'>
                 I'm Mahdi Hasan, a 22-year-old Italian <span className='text-[#ed7d67]'>Freelance Front-end developer.</span>  I'm a weird guy who likes making weird things with web technologies. <br />
 I like to <span className='text-[#ed7d67]'>resolve</span>  design problems, <span className='text-[#ed7d67]'>create</span>  smart user interface and  <span className='text-[#ed7d67]'>imagine</span> useful interaction, developing rich web experiences & <span className='text-[#ed7d67]'>web applications.</span> <br />
 When not working or futzing around with code, I study how to escape from University. Actually  <span className='text-[#ed7d67]'>for hire.</span>
                 </p>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-4 sm:pt-8  gap-4">
                  
                 <svg className='w-[40px] sm:w-[55px] sm:h-[55px] hover:fill-[#61dafb] h-[40px]' viewBox="0 0 128 128">
                     <path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3-12.5 4.8-19.3 11.4-19.3 18.8s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zm-14.8-30.5c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zm-11.2 59.3c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zm-25.6 27.1c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zm25.6-27.1c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zm-54.5-16.2c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zm-24.7 29c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5-13.8-4-22.1-10-22.1-15.6zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zm60.8-20.3c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"></path>
@@ -56,18 +56,33 @@ When not working or futzing around with code, I study how to escape from Univers
 
             </motion.div>
             <motion.div
-              className="right-section relative bg-[#202128]   z-[100000]  shadow-summery  h-full "
+              className="right-section relative bg-[#202128]   z-[100000] sm:mt-[100px]   shadow-summery h-full sm:h-[600px] "
               initial={{ y: '100%' }}
               animate={{ y: '0%', transition: { delay: 0.2, duration: 0.3 } }}
               exit={{ y: '100%', transition: { duration: 0.3, ease: 'easeInOut' } }} // Slowly close the right section
             >   
    
-              <div className="px-4 sm:px-8   z-[100000] w-full relative absolute top-0 lg:px-20  py-20">
+              <div className="px-4 sm:px-8   z-[100000] w-full relative absolute  lg:px-20  py-20">
               <button onClick={onClose} className="text-white  text-[70px] leading-[80px] font-normal absolute right-[40px] top-[30px]">
-            x
+              <svg
+      fill="#ffffff"
+      height="64px"
+      width="64px"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="-110.59 -110.59 681.95 681.95"
+      xmlSpace="preserve"
+      stroke="#ffffff"
+      transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+    >
+      <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+                    
+    </svg>
+
                 </button>
                 <p className='text-[#dadada] font-bold capitalize text-[28px] font-popping'>Let's talk</p>
-                  <p className='text-[#dadada] font-semibold  text-[13px] font-popping'>New projects, freelance inquiry or even a coffee.</p>
+                  <p className='text-[#dadada] font-semibold my-4 text-[13px] font-popping'>New projects, freelance inquiry or even a coffee.</p>
                 <form className="  mt-4 w-full ">
                  
         <div className="mb-4  w-full">
