@@ -10,6 +10,7 @@ import Experiments from "@/components/front-end/Experiments/Experiments";
 import Skills from "@/components/front-end/Skills/Skills";
 import Contact from "@/components/front-end/Contact/Contact";
 import PopupForm from "@/components/front-end/about/PopupForm ";
+import Footer from "@/components/front-end/Footer/Footer";
 const svgVariants = {
   hidden: { rotate: -180 },
   visible: {
@@ -67,9 +68,16 @@ export default function Home() {
 
   return (
     <>
+      <div className="relative">
+        
+        <div className="">
+        <PopupForm className="  z-[100000] " isOpen={isOpen} onClose={handleAboutClick} />
+
+        </div>
+
       <SkeletonTheme baseColor={`#fff`} highlightColor={`#444`}>
         <div className="relative mother sectionsPadding bg-[white] dark:bg-[#000]  z-[100000px]">
-        <PopupForm isOpen={isOpen} onClose={handleAboutClick} />
+      
           <div className="grid grid-cols-4 h-[200px]   absolute top-0 ">
             <img
               src="/images/1.png"
@@ -122,8 +130,8 @@ export default function Home() {
                     Interactive Front-end Developer
                   </p>
                   <div className="">
-                    <div className="relative main-about inline ">
-                      <button onClick={handleAboutClick} className="aboutBt font-Arimo font-extraboldbold text-[20px]">
+                    <div onClick={handleAboutClick} className="relative main-about inline ">
+                      <button  className="aboutBt font-Arimo font-extraboldbold text-[20px]">
                         About Me
                       </button>
                       <svg
@@ -292,12 +300,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </SkeletonTheme>
-      <CaseStudies />
+        <CaseStudies />
       <Experiments />
       <Skills />
-      <Contact />
-    </>
+          <Contact />
+          <Footer/>
+     
+      </div>
+
+      </>
   );
 }

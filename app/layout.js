@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         
       </head>
 
-      <body className='scroll-smooth mx-auto shadow-lg max-w-[1700px]'>
+      <body className='scroll-smooth mx-auto h-auto max-w-[1700px]'>
         <ThemeProvider attribute="class">
           {
             loading ?
@@ -44,11 +44,12 @@ export default function RootLayout({ children }) {
                
              </motion.div>
            </div>
-            : <>     <Header />
+              : <>     <Header />
+
           <main>
           {children}
           </main>
-          <Footer/> </>
+        </>
           }
                  </ThemeProvider>
 
