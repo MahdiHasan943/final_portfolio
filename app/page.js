@@ -133,8 +133,9 @@ export default function Home() {
                     <div onClick={handleAboutClick} className="relative main-about inline ">
                       <button  className="aboutBt font-Arimo font-extraboldbold text-[20px]">
                         About Me
-                      </button>
-                      <svg
+                        </button>
+                    
+                         <svg
                         className="absolute aboutArrow right-[-45px] h-[40px] w-[80px] top-0"
                         viewBox="-0 5 24 24"
                         fill="none"
@@ -156,7 +157,9 @@ export default function Home() {
                             }
                           ></path>{" "}
                         </g>
-                      </svg>
+                      </svg> 
+                       
+                    
                      
                     </div>
                   </div>
@@ -292,11 +295,13 @@ export default function Home() {
             <div className="group relative overflow-hidden  h-[230px] mb-[-100px] ">
               <p className="text-center  font-lato italic pb-5 sm:pb-0 font-bold  sm:my-3 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
                 Work
-              </p>
+                </p>
+                <a href="#case" className="bg-[red] h-[100px]">
               {currentTheme === "light" ?                <img className="absolute top-[105px] group-hover:top-[70px]  ease-in-out duration-200" src="/images/downArrow.svg" alt="" />
 :                <img className="absolute h-[60px] top-[105px] group-hover:top-[70px]  ease-in-out duration-200" src="/images/icons8-arrow-30.png" alt="" />
 
-              }
+              }</a>
+              
             </div>
           </div>
         </div>

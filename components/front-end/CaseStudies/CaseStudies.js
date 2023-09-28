@@ -2,7 +2,7 @@ import React from 'react'
 
 const CaseStudies = () => {
   return (
-    <div>CaseStudies</div>
+    <div className='py-[200px]' id='case'>CaseStudies</div>
   )
 }
 
