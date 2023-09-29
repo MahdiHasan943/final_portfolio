@@ -31,15 +31,9 @@ const Footer = () => {
   ]
   return (
     <div className='sectionsPadding bg-[#202128]'>
-      <div className="py-20 ">
+      <div className="py-10 ">
         <div className="flex justify-center text-center w-[100px] mx-auto">
-        <a href="#" className=" uppercase mr-[-50px]">
-        
-        <svg width="200" className="flex text-center mx-auto" height="100" xmlns="http://www.w3.org/2000/svg">
-  <text  x="20" y="60" font-family="Arial" font-size="60" fill="#4c4f65" stroke="white" stroke-width="4">m</text>
-          </svg>
-
-        </a>
+       <img className='my-4' src="/images/fM.png" alt="" />
    </div>
         <div className="flex justify-center gap-4 sm:gap-8">
         {
@@ -63,7 +57,7 @@ const Footer = () => {
         ))
       }
         </div>
-    <p className='text-center text-[#fafafa] text-[16px] mt-8'>@2023 ClearTouch Design | All Rights Reserved.</p>
+    <p className='text-center text-[#fafafa] text-[16px] mt-16'>@2023 ClearTouch Design | All Rights Reserved.</p>
       </div>
 
     </div>
