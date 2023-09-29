@@ -24,7 +24,7 @@ const Experiments = () => {
         </div>
         
         <div
-        className=" h-[450px] group shadow-sm rounded-sm relative overflow-hidden mainbgEx"
+        className=" h-[450px] group shadow-gipShadow rounded-sm relative overflow-hidden mainbgEx"
         >
           <div className="bgEx  h-[450px] w-full">
 
@@ -41,7 +41,7 @@ const Experiments = () => {
         </div>
         
         <div
-        className=" h-[450px] group shadow-sm rounded-sm relative overflow-hidden mainbgEx"
+        className=" h-[450px] group shadow-ButtonShadow rounded-sm relative overflow-hidden mainbgEx"
         >
           <div className="bgEx  h-[450px] w-full">
 
@@ -58,7 +58,7 @@ const Experiments = () => {
       </div>
         
       <div
-        className=" h-[450px] group  shadow-sm rounded-sm relative overflow-hidden mainbgEx"
+        className=" h-[450px] group  shadow-summery rounded-sm relative overflow-hidden mainbgEx"
         >
           <div className="bgEx  h-[450px] w-full">
 

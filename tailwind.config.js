@@ -47,7 +47,9 @@ module.exports = {
   
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
-        'ButtonShadow': ' 0px 18px 40px 0px rgba(255, 110, 107, 0.30)',
+        'ButtonShadow': ' 0px 2px 6px 0px rgba(255, 110, 107, 0.30)',
+        'gipShadow': ' 0px 0px 2px 0px rgba(255, 110, 107, 0.30)',
+
         'summery': '2px 2px 4px 0px rgba(0, 0, 0, 0.05), -2px -2px 4px 0px rgba(0, 0, 0, 0.05)'
       },
       colors: {
