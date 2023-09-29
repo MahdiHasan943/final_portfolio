@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         
       </head>
 
-      <body className='scroll-smooth mx-auto h-auto max-w-[1700px]'>
+      <body className='scroll-smooth shadow-summery mx-auto h-auto max-w-[1700px]'>
         <ThemeProvider attribute="class">
           {
             loading ?

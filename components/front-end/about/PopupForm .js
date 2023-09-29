@@ -10,7 +10,7 @@ const PopupForm = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="popup-form   z-[100000] py-10  gap-4 h-[100%]  absolute   left-0  w-full  my-auto "
+          className="popup-form   z-[100000] py-10   h-[100%]  absolute   left-0  w-full  my-auto "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -18,7 +18,7 @@ const PopupForm = ({ isOpen, onClose }) => {
         >
           <div className=" flex  flex-col-reverse md:flex-none   z-[100000]  md:grid grid-cols-2  h-full  w-[100vw] sm:w-[95%] mx-auto">
             <motion.div
-              className="left-section relative bg-[#f2f2f2] shadow-summery h-full sm:mt-[100px] overflow-hidden md:h-[800px] lg:h-[750px]  xl:h-[600px] z-50 "
+              className="left-section relative bg-[#f2f2f2] shadow-summery h-full sm:mt-[100px] overflow-hidden md:h-[750px] xl:h-[700px]  2:xl:h-[600px] z-50 "
               initial={{ y: "-100%" }}
               animate={{ y: "0%", transition: { delay: 0.2, duration: 0.3 } }}
             >
@@ -111,7 +111,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               {/* <div className=" absolute bottom-0 w-full bg-[#fff] py-6 px-4 sm:px-8"></div> */}
             </motion.div>
             <motion.div
-              className="right-section relative   bg-[#202128]  z-[100000] sm:mt-[100px]   shadow-summery h-full overflow-hidden md:h-[800px] lg:h-[750px]  xl:h-[600px] "
+              className="right-section relative   bg-[#202128]  z-[100000] sm:mt-[100px]   shadow-summery h-full overflow-hidden md:h-[750px] xl:h-[700px]  2:xl:h-[600px] "
               initial={{ y: "100%" }}
               animate={{ y: "0%", transition: { delay: 0.2, duration: 0.3 } }}
               exit={{
@@ -122,12 +122,12 @@ const PopupForm = ({ isOpen, onClose }) => {
               <div className="px-4 sm:px-8   z-[100000] w-full relative absolute  lg:px-20  py-20">
                 <button
                   onClick={onClose}
-                  className="text-white  text-[70px] leading-[80px] font-normal absolute right-[40px] top-[30px]"
+                  className="text-white  text-[70px] leading-[80px] font-normal absolute right-[40px] top-[50px] md:top-[30px]"
                 >
                   <svg
                     fill="#ffffff"
-                    height="64px"
-                    width="64px"
+                    height="50px"
+                    width="50px"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
