@@ -10,7 +10,7 @@ const PopupForm = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="popup-form   z-[100000] py-10   h-[100%]  absolute   left-0  w-full  my-auto "
+          className="popup-form   z-[100000] py-10  h-auto md:h-[100%]  absolute   left-0  w-full  my-auto "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -18,7 +18,7 @@ const PopupForm = ({ isOpen, onClose }) => {
         >
           <div className=" flex  flex-col-reverse md:flex-none   z-[100000]  md:grid grid-cols-2  h-full  w-[100vw] sm:w-[95%] mx-auto">
             <motion.div
-              className="left-section relative bg-[#f2f2f2] shadow-summery h-full sm:mt-[100px] overflow-hidden md:h-[750px] xl:h-[700px]  2:xl:h-[600px] z-50 "
+              className="left-section relative bg-[#f2f2f2] shadow-summery  sm:mt-[100px] overflow-hidden h-[800px] md:h-[750px] xl:h-[700px]  2:xl:h-[600px] z-50 "
               initial={{ y: "-100%" }}
               animate={{ y: "0%", transition: { delay: 0.2, duration: 0.3 } }}
             >
@@ -111,7 +111,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               {/* <div className=" absolute bottom-0 w-full bg-[#fff] py-6 px-4 sm:px-8"></div> */}
             </motion.div>
             <motion.div
-              className="right-section relative   bg-[#202128]  z-[100000] sm:mt-[100px]   shadow-summery h-full overflow-hidden md:h-[750px] xl:h-[700px]  2:xl:h-[600px] "
+              className="right-section relative   bg-[#202128]  z-[100000] sm:mt-[100px]   shadow-summery h-[800px] overflow-hidden md:h-[750px] xl:h-[700px]  2:xl:h-[600px] "
               initial={{ y: "100%" }}
               animate={{ y: "0%", transition: { delay: 0.2, duration: 0.3 } }}
               exit={{
