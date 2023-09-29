@@ -216,7 +216,7 @@ font-family: 'Arimo', sans-serif;
   transition-delay: 0.2s;
 }
 .mainbgEx{
-  z-index: 100000!important;
+  z-index: 100!important;
 }
 .mainbgEx:hover .bgEx{
   transform: translateX(0%) !important;
