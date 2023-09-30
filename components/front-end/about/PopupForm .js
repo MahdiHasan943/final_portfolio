@@ -10,7 +10,7 @@ const PopupForm = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="popup-form   z-[100000] py-10  h-auto md:h-[100%]  absolute   left-0  w-full  my-auto "
+          className="popup-form   z-[100000] py-10  h-auto  md:h-[100%]  absolute   left-0  w-full  my-auto "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

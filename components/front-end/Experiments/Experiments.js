@@ -3,6 +3,13 @@ import motion from "framer-motion"
 const Experiments = () => {
  
   return (
+    <section className="">
+      <div className="bg-[#f3f3f3] py-20">
+        <h3 className='text-center text-[#b29487] text-[18px] sm:text-[24px] font-popping font-semibold tracking-widest	 leading-[30px]'>EXPERIMENTS & OPEN SOURCE</h3>
+        <h2 className='text-center text-[40px] sm:text-[50px] font-extrabold font-sofia py-3  text-[#4a4a4a]'>Web is Fun</h2>
+        
+    </div>
+   
     <div className='bg-white'>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
@@ -75,7 +82,8 @@ const Experiments = () => {
       </div>
             
       </div>
-    </div>
+      </div>
+      </section>
   )
 }
 

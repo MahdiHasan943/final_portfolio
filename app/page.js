@@ -308,7 +308,7 @@ export default function Home() {
       </SkeletonTheme>
         <CaseStudies />
       <Experiments />
-      <Skills />
+      {/* <Skills /> */}
           {/* <Contact /> */}
           <Footer/>
      

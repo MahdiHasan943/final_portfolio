@@ -204,7 +204,7 @@ font-family: 'Arimo', sans-serif;
 /* styles.css */
 
 /* Define a custom CSS class for the gradient border animation */
-
+/* for experiment*/
 .bgEx{
   background: #fce0db;
   transform: translateX(-100%) !important;
@@ -221,4 +221,85 @@ font-family: 'Arimo', sans-serif;
 .mainbgEx:hover .bgEx{
   transform: translateX(0%) !important;
 
+}
+
+/* for case study */
+
+.bgC{
+  background: #204373;
+  transform: translateX(-100%) !important;
+  position: absolute;
+  top: 0;
+  opacity: 0.9;
+  z-index:0;
+  left: 0;
+  transition: all 0.6s;
+  transition-delay: 0.2s;
+}
+.mainBgC{
+  z-index: 100!important;
+}
+.mainBgC:hover .bgC{
+  transform: translateX(0%) !important;
+
+}
+/* Keyframes for filling text color animation */
+@keyframes fillTextAnimation {
+  0% {
+    color: #99999d; /* Initial text color */
+    background-size: 100% 0%; /* Start with no background color */
+    background-position: 0% 100%; /* Start from the bottom */
+  }
+  100% {
+    color: #fff; /* Final text color */
+    background-size: 100% 100%; /* Completely fill the text background */
+    background-position: 0% 0%; /* End at the top */
+  }
+}
+
+/* Animation properties for the text */
+.filling-text-animation {
+  font-size: 100px; /* Adjust the font size as needed */
+  display: inline-block;
+  background-color: linear-gradient(0deg, #99999d, #99999d); /* Initial background color */
+  background-repeat: no-repeat;
+  background-size: 100% 0%; /* Start with no background color */
+  animation: fillTextAnimation 1s forwards; /* Use the animation with a duration of 1 second */
+}
+
+
+
+.greek {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+
+  font-size: 5em;
+  color: #99999d;
+}
+
+.greek::before {
+  /* This will create the layer
+  over original text*/
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+
+/* Setting different color than
+  that of original text  */
+color: #fff;
+overflow: hidden;
+
+/* Setting width as 0*/
+height: 0%;
+transition: 1s;
+transition-delay: 0.3s;
+}
+
+ .nanas:hover .greek::before {
+
+  /* Setting width to 100 on hover*/
+  height: 100%;
+  
 }
