@@ -14,7 +14,7 @@ const Footer = () => {
     },
     {
       "title": "          Linkedin      ",
-      "ref": "https://www.linkedin.com/in/mahdi-tuhin-3b60ab259/",
+      "ref": "https://www.linkedin.com/in/mahdi-hasan-949b80239/",
       "activeColor":"Experiments",
     },
     {
