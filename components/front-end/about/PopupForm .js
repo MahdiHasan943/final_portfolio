@@ -20,7 +20,11 @@ const PopupForm = ({ isOpen, onClose }) => {
             <motion.div
               className="left-section relative bg-[#f2f2f2] shadow-summery  sm:mt-[100px] overflow-hidden h-[800px] md:h-[750px] xl:h-[700px]  2:xl:h-[600px] z-50 "
               initial={{ y: "-100%" }}
-              animate={{ y: "0%", transition: { delay: 0.2, duration: 0.3 } }}
+              animate={{ y: "0%", transition: { delay: 0.1, duration: 0.3 } }}
+              exit={{
+                y: "100%",
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }} //
             >
               <div className="px-4 sm:px-8 bg-[#f2f2f2]   z-[100000]  absolute top-0 lg:px-20  pt-20 pb-10">
                 <p className="text-[#202128] font-bold capitalize text-[28px]  font-popping">

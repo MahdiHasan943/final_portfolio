@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
+import { textVariant2 } from '@/utils/motion/motion';
 const CaseStudies = () => {
   const projects = [
     {
@@ -46,10 +47,10 @@ const CaseStudies = () => {
   return (
     <div className='py-[150px] bg-[#f3f3f3]' id='case'>
 
-<h3 className='text-center text-[#b29487] text-[18px] sm:text-[24px] font-popping font-semibold tracking-widest	 leading-[30px]'> CASE STUDIES
-</h3>
-        <h2 className='text-center text-[40px] sm:text-[50px] font-extrabold font-sofia py-3  text-[#4a4a4a]'>Latest Works
-</h2>
+<motion.h3 variants={textVariant2} initial="hidden" whileInView="show" className='text-center text-[#b29487] text-[18px] sm:text-[24px] font-popping font-semibold tracking-widest	 leading-[30px]'> CASE STUDIES
+</motion.h3>
+        <motion.h2 variants={textVariant2} initial="hidden" whileInView="show" className='text-center text-[40px] sm:text-[50px] font-extrabold font-sofia py-3  text-[#4a4a4a]'>Latest Works
+</motion.h2>
         
        
       <div className="w-full relative grid grid-cols-1 px-4 sm:px-8 gap-16 mx-auto   py-4 justify-center">
