@@ -329,7 +329,7 @@ export default function Home() {
         <CaseStudies />
       <Experiments />
       {/* <Skills /> */}
-          {/* <Contact /> */}
+          <Contact />
           <Footer/>
      
       </div>

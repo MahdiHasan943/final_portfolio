@@ -6,9 +6,13 @@ import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import PopupForm from "../about/PopupForm ";
 
 function Header() {
-  
+  const [isOpen, setIsOpen] = useState(false);
+  const handleAboutClick = () => {
+    setIsOpen(!isOpen);
+  };
   const router = useRouter();
   const navigateToSection =  (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
@@ -39,58 +43,80 @@ function Header() {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
-  if (!mounted) return null;
+
   const currentTheme = theme === "system" ? systemTheme : theme;
   const navLink = [
     {
       "title": "CaseStudies",
-      "ref": "",
+      "ref": "#case",
       "activeColor":"Cse",
     },
     {
       "title": "          Experiments      ",
-      "ref": "",
+      "ref": "#exp",
       "activeColor":"Experiments",
     },
     {
       "title": "Skills",
-      "ref": "",
+      "ref": "#skill",
       "activeColor":"Skills",
     },
     
-    {
-      "title": "          Contact      ",
-      "ref": "",
-      "activeColor":"Contact",
-    },
+   
   ]
+  const handleClick = (targetHref) => {
+    setTimeout(() => {
+      const targetSection = document.querySelector(targetHref);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 300); // Delay for 0.3 seconds (300 milliseconds) before scrolling
+  };
+  
+  useEffect(() => {
+    setMounted(true);
+  
+    // Add a common class to all the links that should trigger scrolling
+    const links = document.querySelectorAll('.scroll-trigger');
+  
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+        const targetHref = link.getAttribute('href'); // Get the href attribute
+  
+        // Check if the targetHref is valid and starts with '#'
+        if (targetHref && targetHref.startsWith('#')) {
+          handleClick(targetHref); // Call handleClick with the targetHref
+        }
+      });
+    });
+  
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener('click', handleClick);
+      });
+    };
+  }, []);
+  
+  if (!mounted) return null;
 
+  
   const menu = (
     <React.Fragment>
-     {/* <a href="#" className="flex justify-start ml-[-20px] HideForSm   nav__brand">
-        
-        <svg width="200" className="pt-3 md:pt-0" height="100" xmlns="http://www.w3.org/2000/svg">
-  <text x="20" y="60" font-family="Arial" font-size="60" fill="#4c4f65" stroke="white" stroke-width="4">m</text>
-          </svg>
-
-        </a> */}
-    
-   
+     
       
       {
         navLink.map(nav => (
           
         <motion.li variants={textVariant2} initial="hidden" whileInView="show" className="  nav__item item">
-        <Link
-          href={''}
-          onClick={() => {
-            navToggle();
-            setColor(nav?.activeColor);
-          }}
+            <a                            
+        onClick={() => {
+          navToggle();
+          setColor(nav?.activeColor);
+          handleClick(nav.ref); // Call handleClick with nav.ref as the argument
+        }}
+        
           className={`${
             color === nav?.activeColor
               ? "  group text-[#333335] dark:text-white transition-all duration-300 ease-in-out "
@@ -99,12 +125,18 @@ function Header() {
         >{nav.title}
 
           <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
-        </Link>
+        </a>
       </motion.li>
         ))
       }
     
-  
+      <a onClick={()=>{
+        navToggle();
+        handleAboutClick()
+
+      }} className="text-[#333335] nav__link mt-[-7px] dark:text-white ">
+        Contact
+ </a>
     
           {currentTheme === "dark" ? (
         <button className="w-[50px] h-[50px]" onClick={() => {
@@ -140,9 +172,11 @@ function Header() {
     </React.Fragment>
   );
 
-  return (
-  
-    <motion.nav   className="overflow-hidden mb-[-180px]  px-4  w-full sm:py-4  nav">
+  return (<>       
+    <PopupForm className="  z-[100000] " isOpen={isOpen} onClose={handleAboutClick} />
+
+    <motion.nav className="overflow-hidden mb-[-180px]  px-4  w-full sm:py-4  nav">
+
       <div className="flex w-full 2xl:w-[auto] md:justify-between 2xl:justify-center">
         <a href="#" className="flex   nav__brand">
         
@@ -170,6 +204,8 @@ function Header() {
         <div className="line3"></div>
       </div>
     </motion.nav>
+
+    </>
   );
 }
 
