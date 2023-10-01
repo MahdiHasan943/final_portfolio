@@ -52,8 +52,30 @@ const CaseStudies = () => {
 </h2>
         
        
-      <div className="w-full grid grid-cols-1 px-4 sm:px-8 gap-16 mx-auto   py-4 justify-center">
+      <div className="w-full relative grid grid-cols-1 px-4 sm:px-8 gap-16 mx-auto   py-4 justify-center">
+        <div className="absolute left-0 top-0 w-full h-full px-8 ">
+          <div className="flex justify-between h-full w-full ">
+            <div className="flex flex-col justify-between">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"><circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5"></circle></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"><path fill="none" stroke="#0FE851" stroke-width="8" stroke-miterlimit="10" d="M12.6 56l22.8-39.5L58.2 56z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="26 -26 180 180"><path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path><path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"><circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5"></circle></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path></svg>
+            </div>
+            <div className="flex flex-col justify-between">
+      <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"><path fill="none" stroke="#0FE851" stroke-width="8" stroke-miterlimit="10" d="M12.6 56l22.8-39.5L58.2 56z"></path></svg>
 
+        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="26 -26 180 180"><path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path><path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"><circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5"></circle></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="26 -26 180 180"><path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path><path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path></svg>
+
+
+
+      </div>
+          </div>
+</div>
         {
           projects.map(p => 
             (

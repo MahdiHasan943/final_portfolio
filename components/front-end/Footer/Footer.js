@@ -9,23 +9,23 @@ const Footer = () => {
   const navLink = [
     {
       "title": "Twitter",
-      "ref": "",
+      "ref": "https://twitter.com/mahdituhin1",
       "activeColor":"Cse",
     },
     {
       "title": "          Linkedin      ",
-      "ref": "",
+      "ref": "https://www.linkedin.com/in/mahdi-tuhin-3b60ab259/",
       "activeColor":"Experiments",
     },
     {
       "title": "Facebook",
-      "ref": "",
+      "ref": "https://www.facebook.com/mahdi.tuhin.7/",
       "activeColor":"Skills",
     },
     
     {
       "title": "          Github      ",
-      "ref": "",
+      "ref": "https://github.com/MahdiHasan943",
       "activeColor":"Contact",
     },
   ]
@@ -40,7 +40,8 @@ const Footer = () => {
         navLink.map(nav => (
           
         <a
-          
+            href={nav.ref}
+            target='_blank'
           onClick={() => {
       
             setColor(nav?.activeColor);

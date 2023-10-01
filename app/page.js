@@ -65,6 +65,26 @@ export default function Home() {
       document.removeEventListener("mousemove", parallax);
     };
   }, []);
+  const handleClick = () => {
+    setTimeout(() => {
+      const targetSection = document.querySelector('#case');
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 300); // Delay for 0.3 seconds (300 milliseconds) before scrolling
+  };
+  
+
+  useEffect(() => {
+    const link = document.querySelector('a[href="#case"]');
+    if (link) {
+      link.addEventListener('click', handleClick);
+
+      return () => {
+        link.removeEventListener('click', handleClick);
+      };
+    }
+  }, []);
 
   return (
     <>
@@ -294,9 +314,9 @@ export default function Home() {
           <div className="w-full absolute left-0  bottom-[10px] flex justify-center items-end ">
             <div className="group relative overflow-hidden  h-[230px] mb-[-100px] ">
               <p className="text-center  font-lato italic pb-5 sm:pb-0 font-bold  sm:my-3 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
-                Work
+                Works
                 </p>
-                <a href="#case" className="bg-[red] h-[100px]">
+                <a  onClick={handleClick} className="bg-[red] h-[100px]">
               {currentTheme === "light" ?                <img className="absolute top-[105px] group-hover:top-[70px]  ease-in-out duration-200" src="/images/downArrow.svg" alt="" />
 :                <img className="absolute h-[60px] top-[105px] group-hover:top-[70px]  ease-in-out duration-200" src="/images/icons8-arrow-30.png" alt="" />
 
