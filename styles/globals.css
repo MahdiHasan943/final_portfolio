@@ -22,7 +22,22 @@ font-family: 'Arimo', sans-serif;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html,
+body{
+  transition: background-color 1s;
 
+}
+
+.dark{
+  transition: background-color 1s;
+
+  background-color: black;
+  /* .slick-dots li button::before {
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.7;
+  }  */
+}
 .nav {
   display: flex;
   align-items: center;
@@ -274,9 +289,8 @@ font-family: 'Arimo', sans-serif;
   padding: 0;
   position: absolute;
   
+  color: #fff;
 
-  font-size: 150px;
-  color: #99999d;
 }
 
 .greek::before {
@@ -289,11 +303,11 @@ left: 0;
 
 /* Setting different color than
   that of original text  */
-color: #fff;
+  color: #99999d;
 overflow: hidden;
 
 /* Setting width as 0*/
-height: 0%;
+height: 100%;
 transition: 1s;
 transition-delay: 0.3s;
 }
@@ -301,6 +315,6 @@ transition-delay: 0.3s;
  .nanas:hover .greek::before {
 
   /* Setting width to 100 on hover*/
-  height: 100%;
+  height: 0%;
   
 }
