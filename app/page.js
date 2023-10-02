@@ -96,7 +96,7 @@ export default function Home() {
         </div>
 
       <SkeletonTheme baseColor={`#fff`} highlightColor={`#444`}>
-        <div className="relative mother sectionsPadding bg-[white] dark:bg-[#000]  z-[100000px]">
+        <div id="hero" className="relative mother sectionsPadding bg-[white] dark:bg-[#000]  z-[100000px]">
       
           <div className="grid grid-cols-4 h-[200px]   absolute top-0 ">
             <img

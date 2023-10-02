@@ -132,6 +132,7 @@ function Header() {
     
       <a onClick={()=>{
         navToggle();
+        handleClick('#hero')
         handleAboutClick()
 
       }} className="text-[#333335] nav__link mt-[-7px] dark:text-white ">
