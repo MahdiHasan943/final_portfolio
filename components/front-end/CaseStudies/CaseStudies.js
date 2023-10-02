@@ -45,7 +45,7 @@ const CaseStudies = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <div className='py-[150px] bg-[#f3f3f3]' id='case'>
+    <section className='py-[150px] bg-[#f3f3f3]' id='case'>
 
 <motion.h3 variants={textVariant2} initial="hidden" whileInView="show" className='text-center text-[#b29487] text-[18px] sm:text-[24px] font-popping font-semibold tracking-widest	 leading-[30px]'> CASE STUDIES
 </motion.h3>
@@ -220,7 +220,7 @@ const CaseStudies = () => {
 
 
       
-    </div>
+    </section>
   )
 }
 

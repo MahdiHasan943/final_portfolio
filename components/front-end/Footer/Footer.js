@@ -30,7 +30,7 @@ const Footer = () => {
     },
   ]
   return (
-    <div className='sectionsPadding bg-[#202128]'>
+    <section className='sectionsPadding bg-[#202128]'>
       <div className="py-10 ">
         <div className="flex justify-center text-center w-[100px] mx-auto">
        <img className='my-4' src="/images/fM.png" alt="" />
@@ -61,7 +61,7 @@ const Footer = () => {
     <p className='text-center text-[#fafafa] text-[16px] mt-16'>@2023 ClearTouch Design | All Rights Reserved.</p>
       </div>
 
-    </div>
+    </section>
   )
 }
 
