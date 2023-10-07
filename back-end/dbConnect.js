@@ -12,8 +12,8 @@ let isConnected = false; // track the connection
   }
 
   try {
-    await mongoose.connect(process.env.Rdd, {
-      dbName: "m-f-portfolio",
+    await mongoose.connect(process.env.MONGODB_URI, {
+      dbName: "Mahdi_f_Portfolio",
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
