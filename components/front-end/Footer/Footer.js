@@ -48,9 +48,9 @@ const Footer = () => {
           }}
           className={`${
             color === nav?.activeColor
-              ? "  group text-[#fafafa] dark:text-white transition-all duration-300 ease-in-out "
+              ? "   text-[#fafafa] dark:text-white transition-all duration-300 ease-in-out "
               : "text-[#fafafa] dark:text-white "
-          } text-[20px] font-bold  `}
+          } text-[20px] font-bold  group`}
         >{nav.title}
 
           <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
