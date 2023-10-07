@@ -1,49 +1,28 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { textVariant2 } from '@/utils/motion/motion';
+import Link from 'next/link';
 const CaseStudies = () => {
-  const projects = [
-    {
-      "id": 1,
-      "image": '/images/firstC.png',
-      "title": "Lilyane James      ",
-      "number":"01",
-      'details':"Online shopping store since 2022      ",
-      "button":"",
-    },
-    {
-      "id": 2,
-      "image": '/images/bar.png',
-      "title": "Passion blend bar",
-      "number":"02",
-      'details':"passcion blend bar in london since 2018",
-      "button":"",
-    },
-    {
-      "id": 3,
-      "image": '/images/clear.png',
-      "title": "Cleartouch design   ",
-      "number":"03",
-      'details':" agency website begins since 2022",
-      "button":"",
-    },
-    {
-      "id": 4,
-      "image": '/images/cos.png',
-      "title": "Cosmetic website    ",
-      "number":"04",
-      'details':"it's a new cosmetic business website",
-      "button":"",
-    }
-  ]
-  const [divColor, setDivColor] = useState('#99999d');
+  const [works, setWorks] = useState([])
+  const fetchPosts = async () => {
+
+
+    const response = await fetch("/api/works");
+    const data = await response.json();
+
+    setWorks(data);
+  };
+
+useEffect(() => {
+
+fetchPosts();
+}, []);
+  console.log(works);
 
   const { systemTheme, theme, setTheme } = useTheme();
-
   const currentTheme = theme === "system" ? systemTheme : theme;
-
   return (
     <section className='py-[150px] bg-[#f3f3f3]' id='case'>
 
@@ -78,7 +57,7 @@ const CaseStudies = () => {
           </div>
 </div>
         {
-          projects.map(p => 
+          works.map(p => 
             (
               <motion.div key={p.id} className="w-full shadow-gipShadow  lg:w-[700px] xl:w-[800px] 2xl:w-[980px] mx-auto mainBgC rounded-sm overflow-hidden nanas relative  group bg-cover bg-center h-[290px] sm:h-[480px]" style={{ backgroundImage: `url(${p.image})` }}>
         <div className="bg-[#204373] absolute  opacity-[0.5]  h-[480px] w-full"></div>
@@ -94,7 +73,7 @@ const CaseStudies = () => {
                         <h2 className='text-[30px] sm:text-[60px]  font-sofia font-bold text-white'>{p.title}</h2>
                         <h2 className='text-[15px] sm:text-[24px] font-popping tracking-widest  text-white'>{p.details}</h2>
                     <div className="py-4">
-                    <div  className="relative  main-about inline ">
+                    <Link href={`/works/${p._id}`}>  <div  className="relative  main-about inline ">
                           <button  className="aboutBt font-Arimo font-extraboldbold text-[15px] sm:text-[20px]">
                             Case Study
                             </button>
@@ -124,7 +103,7 @@ const CaseStudies = () => {
                            
                         
                          
-                        </div>
+                        </div></Link> 
                   </div>
     
                 </div>
@@ -141,7 +120,7 @@ const CaseStudies = () => {
                  <h2 className='text-[30px] sm:text-[60px]  font-sofia font-bold text-white'>{p.title}</h2>
                  <h2 className='text-[15px] sm:text-[24px] font-popping tracking-widest  text-white'>{p.details}</h2>
              <div className="py-4">
-             <div  className="relative  main-about inline ">
+             <Link href={`/works/${p._id}`}> <div  className="relative  main-about inline ">
                    <button  className="aboutBt font-Arimo font-extraboldbold text-[15px] sm:text-[20px]">
                      Case Study
                      </button>
@@ -171,7 +150,7 @@ const CaseStudies = () => {
                     
                  
                   
-                 </div>
+                 </div></Link> 
            </div>
 
          </div>
