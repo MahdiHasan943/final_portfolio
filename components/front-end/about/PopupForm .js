@@ -150,7 +150,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                   New projects, freelance inquiry or even a coffee.
                 </p>
                 <form className="  mt-4 w-full ">
-                  <div className="mb-4  w-full">
+                  <div className="mb-4 group w-full">
                     <label
                       className="block text-[#dadada] text-sm font-bold mb-2"
                       htmlFor="name"
@@ -158,12 +158,17 @@ const PopupForm = ({ isOpen, onClose }) => {
                       Name *
                     </label>
                     <input
-                      className="shadow  bg-[#202128] text-[#fff] focus:bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
+                      className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
                       id="name"
                       type="text"
                     />
                   </div>
-                  <div className="mb-4">
+
+
+
+
+
+                  <div className="mb-4 group">
                     <label
                       className="block text-[#dadada]  text-sm font-bold mb-2"
                       htmlFor="email"
@@ -171,12 +176,12 @@ const PopupForm = ({ isOpen, onClose }) => {
                       Email *
                     </label>
                     <input
-                      className="shadow  bg-[#202128] text-[#dadada] focus:bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white relative rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+                      className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
                       id="email"
                       type="email"
                     />
                   </div>
-                  <div className="mb-6">
+                  <div className="mb-6 group">
                     <label
                       className="block text-[#dadada] text-sm font-bold mb-2"
                       htmlFor="message"
@@ -184,7 +189,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                       Message *
                     </label>
                     <textarea
-                      className="shadow bg-[#202128] text-white focus:bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white relative rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+                      className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
                       id="message"
                       rows="4"
                     ></textarea>
