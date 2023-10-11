@@ -1,23 +1,3 @@
-
-/* font-thin: This class sets the font-weight to 100.
-font-extralight: This class sets the font-weight to 200.
-font-light: This class sets the font-weight to 300.
-font-normal: This class sets the font-weight to 400.
-font-medium: This class sets the font-weight to 500.
-font-semibold: This class sets the font-weight to 600.
-font-bold: This class sets the font-weight to 700.
-font-extrabold: This class sets the font-weight to 800.
-font-black: This class sets the font-weight to 900.
-font-family: 'Lato', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Foldit', cursive;
-font-family: 'Sofia Sans', sans-serif;
-font-family: 'Volkhov', serif;
-font-family: 'Arimo', sans-serif;
-*/
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Foldit:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,700;0,900;1,100;1,700;1,900&family=Sofia+Sans:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @tailwind base;
 @tailwind components;
@@ -30,14 +10,9 @@ body{
 
 .dark{
   transition: background-color 1s;
-
   background-color: black;
-  /* .slick-dots li button::before {
-    font-size: 16px;
-    color: #fff;
-    opacity: 0.7;
-  }  */
 }
+/* nav start */
 .nav1 {
   display: flex;
   align-items: center;
@@ -112,7 +87,6 @@ body{
     width: 100vw;
     padding-bottom: 20px;
     display: block!important;
-    /* background: rgb(0, 33, 65); */
     background: linear-gradient(270deg,#f06449,#ef3636);  flex-direction: column;
     justify-content: center;
     gap: 30px;
@@ -140,7 +114,6 @@ body{
     display: block;
     cursor: pointer;
   }
-
   .nav__menu {
     position: fixed;
     top: 0;
@@ -149,7 +122,6 @@ body{
     width: 100vw;
     padding-bottom: 20px;
     overflow: hidden;
-    /* background: rgb(0, 33, 65); */
     background: linear-gradient(270deg,#235aa6,#101b3b);
     flex-direction: column;
     justify-content: center;
@@ -160,18 +132,11 @@ body{
     gap: 30px;
     transform: translateX(100%) !important;
   }
-  /* .nav__link{
-    text-align: start!important;
-  } */
-  
 }
 /* Active Class */
 .nav__active {
   transform: translateX(0%) !important;
 }
-/* .line2{
-  width: 1.5rem;
-} */
 /* Toggle Icon Animation */
 .toggle .line1 {
   transform: rotate(-45deg) translate(-4px, 5px);
@@ -189,8 +154,7 @@ body{
   width: 100%;
   z-index: 9999999999999!important;
   position: sticky;
-
-background: white;
+  background: white;
   animation: fadeInDown 1s ease-in-out 0s 1 normal none running;
 
 }
@@ -201,16 +165,13 @@ background: white;
     width: 100%;
     z-index: 9999999999999!important;
     position: sticky;
-  
-  background: none;
+    background: none;
     animation: fadeInDown 1s ease-in-out 0s 1 normal none running;
   
   }
 }
 .navbar1 {
-  position: relative;
-  /* z-index: 999; */
-  
+  position: relative;  
 }
 @keyframes fadeInDown{
   0% {
@@ -223,15 +184,11 @@ background: white;
   }
   
 }
-
-
-
+/* nav end */
 /* contex style */
 .sectionsPadding {
     @apply px-4 sm:px-16 py-10;
   }
-/* context style */
-
 .mother{
   position: relative;
   width: 100%;
@@ -239,7 +196,6 @@ background: white;
  overflow: hidden;
 }
 .aboutBt{
-  
   letter-spacing: 3px;
   padding: 12px 20px;
   background-color: #f06449;
@@ -253,10 +209,6 @@ background: white;
   transform: translateX(8px); /* Move the element 15 pixels to the right on hover */
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
-
-/* styles.css */
-
-/* Define a custom CSS class for the gradient border animation */
 /* for experiment*/
 .bgEx{
   background: #fce0db;
@@ -309,7 +261,6 @@ background: white;
     background-position: 0% 0%; /* End at the top */
   }
 }
-
 /* Animation properties for the text */
 .filling-text-animation {
   font-size: 100px; /* Adjust the font size as needed */
@@ -319,40 +270,26 @@ background: white;
   background-size: 100% 0%; /* Start with no background color */
   animation: fillTextAnimation 1s forwards; /* Use the animation with a duration of 1 second */
 }
-
-
-
 .greek {
   margin: 0;
   padding: 0;
   position: absolute;
-  
   color: #fff;
-
 }
 
 .greek::before {
-  /* This will create the layer
-  over original text*/
 content: attr(data-text);
 position: absolute;
 top: 0;
 left: 0;
-
-/* Setting different color than
-  that of original text  */
-  color: #99999d;
+color: #99999d;
 overflow: hidden;
-
-/* Setting width as 0*/
 height: 100%;
 transition: 1s;
 transition-delay: 0.3s;
 }
 
  .nanas:hover .greek::before {
-
-  /* Setting width to 100 on hover*/
   height: 0%;
   
 }

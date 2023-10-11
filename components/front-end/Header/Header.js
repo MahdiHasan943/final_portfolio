@@ -1,14 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import {
   textVariant2,
-  textVariant,
-  navVariants,
-  staggerContainer,
 } from "@/utils/motion/motion";
 import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import PopupForm from "../about/PopupForm ";
@@ -18,10 +13,7 @@ function Header() {
   const handleAboutClick = () => {
     setIsOpen(!isOpen);
   };
-  const router = useRouter();
   const [active, setActive] = useState("nav__menu");
-    
-
   const [stickyClass, setStickyClass] = useState('');
   const [color, setColor] = useState(false);
   const [bg, setBg] = useState("nav_bg");
@@ -80,7 +72,6 @@ function Header() {
   };
   useEffect(() => {
     setMounted(true);
-
     // Add a common class to all the links that should trigger scrolling
     const links = document.querySelectorAll(".scroll-trigger");
     links.forEach((link) => {
@@ -227,9 +218,3 @@ function Header() {
   );
 }
 export default Header;
-
-// const navigateToSection =  (sectionId) => {
-//   const sectionElement = document.getElementById(sectionId);
-//   sectionElement.scrollIntoView({ behavior: 'smooth' });
-//   router.push(`/?section=${sectionId}`, undefined, { shallow: true });
-// }

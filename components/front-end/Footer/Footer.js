@@ -2,10 +2,7 @@
 import React, { useState } from 'react'
 
 const Footer = () => {
-
   const [color, setColor] = useState(false);
-  
-
   const navLink = [
     {
       "title": "Twitter",
@@ -21,8 +18,7 @@ const Footer = () => {
       "title": "Facebook",
       "ref": "https://www.facebook.com/mahdi.tuhin.7/",
       "activeColor":"Skills",
-    },
-    
+    }, 
     {
       "title": "          Github      ",
       "ref": "https://github.com/MahdiHasan943",
@@ -64,5 +60,4 @@ const Footer = () => {
     </section>
   )
 }
-
 export default Footer
