@@ -38,12 +38,14 @@ body{
     opacity: 0.7;
   }  */
 }
-.nav {
+.nav1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: auto;
+  z-index: 99999999999999999!important;
   width: 100%;
+  position: sticky;
 }
 .tuoches{
   font-family: "Lato";
@@ -127,7 +129,7 @@ body{
   .nav__activeb{
     transform: translateX(0%) !important;
   }
-  .nav {
+  .nav1{
     display: flex;
     justify-content: space-between;
   }
@@ -146,6 +148,7 @@ body{
     height: 100%;
     width: 100vw;
     padding-bottom: 20px;
+    overflow: hidden;
     /* background: rgb(0, 33, 65); */
     background: linear-gradient(270deg,#235aa6,#101b3b);
     flex-direction: column;
@@ -184,9 +187,44 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9999999999999!important;
   position: sticky;
+
+background: white;
+  animation: fadeInDown 1s ease-in-out 0s 1 normal none running;
+
 }
+.dark{
+  .nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999999999!important;
+    position: sticky;
+  
+  background: none;
+    animation: fadeInDown 1s ease-in-out 0s 1 normal none running;
+  
+  }
+}
+.navbar1 {
+  position: relative;
+  /* z-index: 999; */
+  
+}
+@keyframes fadeInDown{
+  0% {
+    opacity: 0;
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+  
+}
+
+
 
 /* contex style */
 .sectionsPadding {

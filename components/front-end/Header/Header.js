@@ -20,6 +20,9 @@ function Header() {
   };
   const router = useRouter();
   const [active, setActive] = useState("nav__menu");
+    
+
+  const [stickyClass, setStickyClass] = useState('');
   const [color, setColor] = useState(false);
   const [bg, setBg] = useState("nav_bg");
   const [icon, setIcon] = useState("nav__toggler");
@@ -63,7 +66,18 @@ function Header() {
       }
     }, 300); // Delay for 0.3 seconds (300 milliseconds) before scrolling
   };
+  useEffect(() => {
+    window.addEventListener('scroll', stickNavbar);
+    return () => window.removeEventListener('scroll', stickNavbar);
+  }, []);
 
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      // window height changed for the demo
+      windowHeight > 150 ? setStickyClass('nav') : setStickyClass('');
+    }
+  };
   useEffect(() => {
     setMounted(true);
 
@@ -85,7 +99,9 @@ function Header() {
       });
     };
   }, []);
+
   if (!mounted) return null;
+
   const menu = (
     <React.Fragment>
       {navLink.map((nav) => (
@@ -103,7 +119,7 @@ function Header() {
             }}
             className={`${
               color === nav?.activeColor
-                ? "  group1 text-[#333335] dark:text-white transition-all duration-300 ease-in-out "
+                ? "  group1 text-[#333335] dark:text-white transition-all duration-100 ease-in-out "
                 : "text-[#333335] dark:text-white "
             } nav__link  group`}
           >
@@ -161,7 +177,7 @@ function Header() {
         isOpen={isOpen}
         onClose={handleAboutClick}
       />
-      <motion.nav className="overflow-hidden mb-[-180px]  px-4  w-full sm:py-4  nav">
+      <motion.nav className={`overflow-hidden ${stickyClass} mb-[-180px]  px-4  w-full sm:py-4 nav1 `}>
         <div className="flex w-full 2xl:w-[auto] md:justify-between 2xl:justify-center">
         <Link href="/" className="flex   nav__brand">
             <svg
@@ -191,7 +207,7 @@ function Header() {
             }
           ></div>
           <motion.ul
-            variants={staggerContainer}
+          
             className={
               icon === "nav__toggler"
                 ? `transition duration-[300ms]   ${active}`
