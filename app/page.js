@@ -10,7 +10,6 @@ import Experiments from "@/components/front-end/Experiments/Experiments";
 import Skills from "@/components/front-end/Skills/Skills";
 import Contact from "@/components/front-end/Contact/Contact";
 import PopupForm from "@/components/front-end/about/PopupForm ";
-import Footer from "@/components/front-end/Footer/Footer";
 
 const svgVariants = {
   hidden: { rotate: -180 },
@@ -343,7 +342,6 @@ export default function Home() {
         <Experiments />
         {/* <Skills /> */}
         <Contact />
-        <Footer />
       </div>
     </>
   );
