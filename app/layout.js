@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 import { Triangle } from "react-loader-spinner";
 import { motion, easeOut, easeIn } from "framer-motion";
+import TopBtn from "@/components/front-end/TobBtn";
 
 export default function RootLayout({ children }) {
   const [loading, setLoading] = useState(true);
@@ -43,13 +44,20 @@ export default function RootLayout({ children }) {
             </div>
           ) : (
             <>
-              {" "}
-              <Header />
-              <main>{children}</main>
-            </>
+                {" "}
+
+                <Header />
+
+                <main>{children}
+                </main>
+                <TopBtn/>
+              </>
           )}
+
         </ThemeProvider>
+
       </body>
+
     </html>
   );
 }

@@ -16,7 +16,7 @@ const CaseStudies = () => {
   useEffect(() => {
     fetchPosts();
   }, []);
-  console.log(works);
+  // console.log(works);
 
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
@@ -53,8 +53,8 @@ const CaseStudies = () => {
                 <circle
                   fill="none"
                   stroke="#6107EF"
-                  stroke-width="9"
-                  stroke-miterlimit="10"
+                  strokeWidth="9"
+                  strokeMiterlimit="10"
                   cx="35"
                   cy="35.1"
                   r="28.5"
@@ -80,8 +80,8 @@ const CaseStudies = () => {
                 <path
                   fill="none"
                   stroke="#0FE851"
-                  stroke-width="8"
-                  stroke-miterlimit="10"
+                  strokeWidth="8"
+                  strokeMiterlimit="10"
                   d="M12.6 56l22.8-39.5L58.2 56z"
                 ></path>
               </svg>
@@ -109,8 +109,8 @@ const CaseStudies = () => {
                 <circle
                   fill="none"
                   stroke="#6107EF"
-                  stroke-width="9"
-                  stroke-miterlimit="10"
+                  strokeWidth="9"
+                  strokeMiterlimit="10"
                   cx="35"
                   cy="35.1"
                   r="28.5"
@@ -138,8 +138,8 @@ const CaseStudies = () => {
                 <path
                   fill="none"
                   stroke="#0FE851"
-                  stroke-width="8"
-                  stroke-miterlimit="10"
+                  strokeWidth="8"
+                  strokeMiterlimit="10"
                   d="M12.6 56l22.8-39.5L58.2 56z"
                 ></path>
               </svg>
@@ -179,8 +179,8 @@ const CaseStudies = () => {
                 <circle
                   fill="none"
                   stroke="#6107EF"
-                  stroke-width="9"
-                  stroke-miterlimit="10"
+                  strokeWidth="9"
+                  strokeMiterlimit="10"
                   cx="35"
                   cy="35.1"
                   r="28.5"
@@ -206,7 +206,7 @@ const CaseStudies = () => {
         </div>
         {works.map((p) => (
           <motion.div
-            key={p.id}
+            key={p._id}
             className="w-full shadow-gipShadow  lg:w-[700px] xl:w-[800px] 2xl:w-[980px] mx-auto mainBgC rounded-sm overflow-hidden nanas relative  group bg-cover bg-center h-[290px] sm:h-[480px]"
             style={{ backgroundImage: `url(${p.image})` }}
           >
@@ -238,11 +238,11 @@ const CaseStudies = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             transform="rotate(0)"
                           >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g
                               id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap ="round"
+                              strokeLinejoin="round"
                             ></g>
                             <g id="SVGRepo_iconCarrier">
                               {" "}
@@ -283,11 +283,11 @@ const CaseStudies = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             transform="rotate(0)"
                           >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g
                               id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap ="round"
+                              strokeLinejoin="round"
                             ></g>
                             <g id="SVGRepo_iconCarrier">
                               {" "}

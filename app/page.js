@@ -11,6 +11,7 @@ import Skills from "@/components/front-end/Skills/Skills";
 import Contact from "@/components/front-end/Contact/Contact";
 import PopupForm from "@/components/front-end/about/PopupForm ";
 import Footer from "@/components/front-end/Footer/Footer";
+
 const svgVariants = {
   hidden: { rotate: -180 },
   visible: {
@@ -168,11 +169,11 @@ export default function Home() {
                           xmlns="http://www.w3.org/2000/svg"
                           transform="rotate(0)"
                         >
-                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                           <g
                             id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           ></g>
                           <g id="SVGRepo_iconCarrier">
                             {" "}
@@ -245,16 +246,16 @@ export default function Home() {
                   fill="none"
                   d="M20 60 L30 30 L40 60 L50 30 L60 60"
                   stroke={currentTheme === "dark" ? "#22376a" : "#7294c2"}
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
                 <motion.path
                   variants={pathVariants}
                   fill="none"
                   d="M30 60 L40 30 L50 60 L60 30 L70 60"
                   stroke={currentTheme === "dark" ? "#22376a" : "#7294c2"}
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </motion.svg>
             </div>

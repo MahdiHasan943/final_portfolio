@@ -35,7 +35,8 @@ const Footer = () => {
         {
         navLink.map(nav => (
           
-        <a
+          <a
+            key={nav.title}
             href={nav.ref}
             target='_blank'
           onClick={() => {

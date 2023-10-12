@@ -156,7 +156,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                     </label>
                     <input
                       className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
-                      id="name"
+                    name="name"
                       type="text"
                     />
                   </div>
@@ -170,7 +170,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                     </label>
                     <input
                       className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
-                      id="email"
+                    name="email"
                       type="email"
                     />
                   </div>
@@ -183,14 +183,14 @@ const PopupForm = ({ isOpen, onClose }) => {
                     </label>
                     <textarea
                       className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
-                      id="message"
+                      name="message"
                       rows="4"
                     ></textarea>
                   </div>
                   <div className="flex  items-center justify-between">
                     <button
                       className="aboutBt font-Arimo font-extraboldbold text-[20px]"
-                      type="button"
+                      
                     >
                       Send Message
                     </button>

@@ -97,6 +97,7 @@ function Header() {
     <React.Fragment>
       {navLink.map((nav) => (
         <motion.li
+          key={nav.title}
           variants={textVariant2}
           initial="hidden"
           whileInView="show"
@@ -180,11 +181,11 @@ function Header() {
               <text
                 x="20"
                 y="60"
-                font-family="Arial"
-                font-size="60"
+                fontFamily="Arial"
+                fontSize="60"
                 fill="#4c4f65"
                 stroke="white"
-                stroke-width="4"
+                strokeWidth="4"
               >
                 m
               </text>
