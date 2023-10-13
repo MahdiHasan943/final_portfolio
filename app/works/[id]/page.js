@@ -14,7 +14,7 @@ const page = ({ params }) => {
     };
     fetchPosts();
   }, [params?.id]);
-  // console.log(workId);
+
 // fetch workdetails
 useEffect(() => {
   const fetchPosts = async () => {
