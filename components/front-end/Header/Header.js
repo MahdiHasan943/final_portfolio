@@ -111,8 +111,8 @@ function Header() {
             }}
             className={`${
               color === nav?.activeColor
-                ? "  group1 text-[#333335] dark:text-white transition-all duration-100 ease-in-out "
-                : "text-[#333335] dark:text-white "
+                ? "  group1 text-[#5a5c71] dark:text-white transition-all duration-100 ease-in-out "
+                : "text-[#5a5c71] dark:text-white "
             } nav__link  group`}
           >
             {nav.title}
@@ -126,7 +126,7 @@ function Header() {
           handleClick("#hero");
           handleAboutClick();
         }}
-        className="text-[#333335] group nav__link mt-[-5px] dark:text-white "
+        className="text-[#5a5c71] group nav__link mt-[-5px] dark:text-white "
       >
         Contact
         <div className="bg-left-bottom bg-gradient-to-t from-[#f03937] to-[#FF413D]    pb-3  md:pb-2 mt-1     bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-out"></div>
