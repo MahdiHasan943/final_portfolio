@@ -6,15 +6,15 @@ const PopupForm = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="popup-form   z-[100000] py-10  h-auto  md:h-[100%]  absolute   left-0  w-full  my-auto "
+          className="popup-form   z-[99999999999999!important] py-10  h-auto  md:h-[100%]  absolute top-0  left-0  w-full  my-auto "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <div className=" flex  flex-col-reverse md:flex-none   z-[100000]  md:grid grid-cols-2  h-full  w-[100vw] sm:w-[95%] mx-auto">
+          <div className=" flex  flex-col-reverse md:flex-none  z-[99999999999999!important]  md:grid grid-cols-2  h-full  w-[100vw] sm:w-[95%] mx-auto">
             <motion.div
-              className="left-section relative bg-[#f2f2f2] shadow-summery  sm:mt-[100px] overflow-hidden h-[800px] md:h-[750px] xl:h-[700px]  2:xl:h-[600px] z-50 "
+              className="left-section relative bg-[#f2f2f2] shadow-summery  sm:mt-[100px] overflow-hidden h-[800px] md:h-[750px] xl:h-[700px]  2:xl:h-[600px] z-[99999999999999!important]  "
               initial={{ y: "-100%" }}
               animate={{ y: "0%", transition: { delay: 0.1, duration: 0.3 } }}
               exit={{
@@ -22,7 +22,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                 transition: { duration: 0.3, ease: "easeInOut" },
               }} //
             >
-              <div className="px-4 sm:px-8 bg-[#f2f2f2]   z-[100000]  absolute top-0 lg:px-20  pt-20 pb-10">
+              <div className="px-4 sm:px-8 bg-[#f2f2f2]   z-[99999999999999!important]   absolute top-0 lg:px-20  pt-20 pb-10">
                 <p className="text-[#202128] font-bold capitalize text-[28px]  font-popping">
                   About me.
                 </p>
@@ -112,7 +112,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               {/* <div className=" absolute bottom-0 w-full bg-[#fff] py-6 px-4 sm:px-8"></div> */}
             </motion.div>
             <motion.div
-              className="right-section relative   bg-[#202128]  z-[100000] sm:mt-[100px]   shadow-summery h-[800px] overflow-hidden md:h-[750px] xl:h-[700px]  2:xl:h-[600px] "
+              className="right-section relative   bg-[#202128]  z-[99999999999999!important]  sm:mt-[100px]   shadow-summery h-[800px] overflow-hidden md:h-[750px] xl:h-[700px]  2:xl:h-[600px] "
               initial={{ y: "100%" }}
               animate={{ y: "0%", transition: { delay: 0.2, duration: 0.3 } }}
               exit={{
@@ -120,12 +120,13 @@ const PopupForm = ({ isOpen, onClose }) => {
                 transition: { duration: 0.3, ease: "easeInOut" },
               }} // Slowly close the right section
             >
-              <div className="px-4 sm:px-8   z-[100000] w-full relative absolute  lg:px-20  py-20">
+              <div className="px-4 sm:px-8  z-[99999999999999!important]  w-full  absolute  lg:px-20  py-20">
                 <button
                   onClick={onClose}
                   className="text-white  text-[70px] leading-[80px] font-normal absolute right-[40px] top-[50px] md:top-[30px]"
                 >
                   <svg
+                    className=""
                     fill="#ffffff"
                     height="50px"
                     width="50px"
