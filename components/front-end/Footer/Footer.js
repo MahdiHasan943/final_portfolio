@@ -55,7 +55,7 @@ const Footer = () => {
         ))
       }
         </div>
-    <p className='text-center text-[#fafafa] text-[16px] mt-16'>@2023 ClearTouch Design | All Rights Reserved.</p>
+    <p className='text-center text-[#fafafa] text-[16px] mt-4'>@2023 ClearTouch Design | All Rights Reserved.</p>
       </div>
 
     </section>
