@@ -44,11 +44,11 @@ function Header() {
       ref: "#exp",
       activeColor: "Experiments",
     },
-    {
-      title: "Skills",
-      ref: "#skill",
-      activeColor: "Skills",
-    },
+    // {
+    //   title: "Skills",
+    //   ref: "#skill",
+    //   activeColor: "Skills",
+    // },
   ];
   const handleClick = (targetHref) => {
     setTimeout(() => {
@@ -169,7 +169,7 @@ function Header() {
         isOpen={isOpen}
         onClose={handleAboutClick}
       />
-      <motion.nav className={`overflow-hidden ${stickyClass} mb-[-180px]  px-4  w-full sm:py-4 nav1 `}>
+      <motion.nav className={`overflow-hidden ${stickyClass} mb-[-180px]  px-4 sm:pl-16  w-full sm:py-4 nav1 `}>
         <div className="flex w-full 2xl:w-[auto] md:justify-between 2xl:justify-center">
         <Link href="/" className="flex   nav__brand">
             <svg

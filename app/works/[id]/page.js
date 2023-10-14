@@ -218,7 +218,7 @@ const page = ({ params }) => {
             </div>
             <div className="pt-6 sm:pt-0">
               <img
-                className="transform scale-100 hover:scale-110 transition-transform duration-500"
+                className="transform mx-auto scale-100 hover:scale-110 transition-transform duration-500"
                 src={filter[0]?.figma}
                 alt=""
               />
