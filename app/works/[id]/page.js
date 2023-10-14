@@ -1,10 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, easeOut, easeIn } from "framer-motion";
+import { Triangle } from "react-loader-spinner";
+
 import {
   textVariant2,
   textVariant3,
-  slideIn,
-  zoomIn,
   fadeIn,
   staggerContainer,
 } from "@/utils/motion/motion";
@@ -12,6 +12,13 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 const page = ({ params }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false); // Set loading to false after 500ms delay
+    }, 1500);
+  }, []);
   const [workId, setWorkId] = useState();
   const [workDetails, setWorkDetails] = useState([]);
 
@@ -51,7 +58,25 @@ const page = ({ params }) => {
   }, []);
 
   return (
-    <motion.div
+    <div className="">
+      {
+        loading?<div className="relative flex justify-center items-center py-20 bg-[#252a60]  h-[100vh] w-full]">
+        <Triangle
+          height="200"
+          width="200"
+          color="#fff"
+          ariaLabel="triangle-loading"
+          wrapperStyle={{}}
+          wrapperClassName=""
+          visible={true}
+        />
+        <motion.div
+          className="h-[100%] w-[100%] absolute top-0 left-0  bg-[#1c1d25]  "
+          initial={{ width: "0%" }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 1, delay: 1, ease: easeOut }}
+        ></motion.div>
+      </div> :  <motion.div
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
@@ -246,7 +271,7 @@ const page = ({ params }) => {
               <button className="underline underline-offset-4 text-[#1c1d25] group-hover:text-white ease-linear duration-500 delay-300 text-center text-[30px]  capitalize sm:text-[40px] font-bold font-Arimo  decoration-[#37a5eb]">
                 Project Passion blend bar
               </button>
-              <p className="text-[60px] sm:mr-[200px] group-hover:translate-x-[50px] group-hover:text-white ease-linear duration-500 delay-300  text-black">
+              <p className="text-[60px] sm:mr-[200px] group-hover:translate-x-[10px] sm:group-hover:translate-x-[50px] group-hover:text-white ease-linear duration-500 delay-300  text-black">
                 →
               </p>
             </Link>
@@ -293,6 +318,9 @@ const page = ({ params }) => {
         </motion.div>
       </div>
     </motion.div>
+      }
+    </div>
+   
   );
 };
 
