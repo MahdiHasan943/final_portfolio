@@ -34,7 +34,7 @@ const TopBtn = () => {
              <motion.div variants={staggerContainer}
              initial="hidden"
              whileInView="show"
-             viewport={{ once: false, amount: 0.25 }}  className="flex justify-end overflow-hidden fixed  top-[90%]    transition  delay-500 z-50 right-[35px] " onClick={goToBtn}>
+             viewport={{ once: false, amount: 0.25 }}  className="flex  justify-end overflow-hidden fixed  top-[90%]    transition  delay-500  z-[99999!important]  right-[35px] " onClick={goToBtn}>
             <motion.div variants={slideIn('right', 'tween', 0.2, 1)}  className="border border-[#b29487] bg-white   top-btn  py-4 px-4 rounded-md ">
             <FaChevronUp className=" text-[#1f4c8f]" />
 
