@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const PopupForm = ({ isOpen, onClose }) => {
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_jaup7uq",
+        "template_egwh5hx",
+        form.current,
+        "xswVE0o1jmqLyyIJ8"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          form.current.reset();
+          toast.success("Successfully submitted form");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -147,7 +176,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                 <p className="text-[#dadada] font-semibold my-4 text-[13px] font-popping">
                   New projects, freelance inquiry or even a coffee.
                 </p>
-                <form className="  mt-4 w-full ">
+                <form onSubmit={sendEmail} ref={form} className="  mt-4 w-full ">
                   <div className="mb-4 group w-full">
                     <label
                       className="block text-[#dadada] text-sm font-bold mb-2"
@@ -157,7 +186,8 @@ const PopupForm = ({ isOpen, onClose }) => {
                     </label>
                     <input
                       className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
-                    name="name"
+                      name="user_name"
+
                       type="text"
                     />
                   </div>
@@ -171,8 +201,9 @@ const PopupForm = ({ isOpen, onClose }) => {
                     </label>
                     <input
                       className="shadow bg-[#202128] border border-t-0 border-l-0 border-r-0 border-white group-hover:border-0 text-[#fff]  bg-left-bottom bg-gradient-to-t from-[#4e76cc]  to-[#132751]    pb-3  md:pb-2      bg-[length:0%_4px] bg-no-repeat group-hover:bg-[length:100%_4px] duration-500 ease-linear  relative rounded w-full py-2 px-3 leading-tight outline-none focus:outline-none focus:shadow-outline"
-                    name="email"
+                      name="user_email"
                       type="email"
+                      required
                     />
                   </div>
                   <div className="mb-6 group">
@@ -189,10 +220,7 @@ const PopupForm = ({ isOpen, onClose }) => {
                     ></textarea>
                   </div>
                   <div className="flex  items-center justify-between">
-                    <button
-                      className="aboutBt font-Arimo font-extraboldbold text-[20px]"
-                      
-                    >
+                    <button type="submit" className="aboutBt font-Arimo font-extraboldbold text-[20px]">
                       Send Message
                     </button>
                   </div>

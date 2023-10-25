@@ -10,17 +10,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Mahdi Hasan Portfolio</title>
-        
       </head>
 
       <body className="scroll-smooth shadow-summery mx-auto h-auto max-w-[1700px]">
         <ThemeProvider attribute="class">
-            <>
-              <Header />
-              <main>{children}</main>
-              <Footer />
-              <TopBtn />
-            </>
+          <>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <TopBtn />
+          </>
         </ThemeProvider>
       </body>
     </html>
