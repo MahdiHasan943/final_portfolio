@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { textVariant2 } from "@/utils/motion/motion";
 import Link from "next/link";
+import Image from "next/image";
 const CaseStudies = () => {
   const [works, setWorks] = useState([]);
   const fetchPosts = async () => {
@@ -208,8 +209,9 @@ const CaseStudies = () => {
           <motion.div
             key={p._id}
             className="w-full shadow-gipShadow  lg:w-[700px] xl:w-[800px] 2xl:w-[980px] mx-auto mainBgC rounded-sm overflow-hidden nanas relative  group bg-cover bg-center h-[290px] sm:h-[480px]"
-            style={{ backgroundImage: `url(${p.image})` }}
+            // style={{ backgroundImage: `url(${p.image})` }}
           >
+         <Image className="absolute max-w-[100%] max-h-[100%]  "   src={p?.image} width={1000} height={480}/>
             <div className="bg-[#204373] absolute  opacity-[0.5]  h-[480px] w-full"></div>
             <div className="bgC  h-[480px] w-full"></div>
 
