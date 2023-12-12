@@ -36,9 +36,9 @@ module.exports = {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
         // volkhov: ['Volkhov', 'serif'],
-        popping: ['Poppins', 'sans-serif'],
+        popping: ['Lato', 'sans-serif'],
         sofia: ['Sofia Sans', 'sans-serif'],
-        Arimo: [ 'Arimo', 'sans-serif']
+        Arimo: ['Sofia Sans', 'sans-serif']
 
         
       
