@@ -7,7 +7,6 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import CaseStudies from "@/components/front-end/CaseStudies/CaseStudies";
 import Experiments from "@/components/front-end/Experiments/Experiments";
-import Skills from "@/components/front-end/Skills/Skills";
 import Contact from "@/components/front-end/Contact/Contact";
 import PopupForm from "@/components/front-end/about/PopupForm ";
 import { pathVariants, svgVariants } from "@/utils/motion/motion";
@@ -142,7 +141,6 @@ export default function Home() {
                       </h1>
 
                       <p className="font-lato italic pb-5 sm:pb-0  sm:my-10 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
-                        {" "}
                         Interactive Front-end Developer
                       </p>
                       <div className="">
@@ -178,7 +176,8 @@ export default function Home() {
                                 }
                               ></path>{" "}
                             </g>
-                          </svg>
+                            </svg>
+                            
                         </div>
                       </div>
                     </div>
@@ -328,7 +327,30 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
-              <div className="w-full absolute left-0  bottom-[10px] flex justify-center items-end ">
+              {/* <div className="w-full absolute left-0  bottom-[10px] flex justify-center items-end ">
+                <div className="group relative overflow-hidden  h-[230px] mb-[-100px] ">
+                  <p className="text-center  font-lato italic pb-5 sm:pb-0 font-bold  sm:my-3 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
+                    Works
+                  </p>
+                  <a onClick={handleClick} className="bg-[red] h-[100px]">
+                    {currentTheme === "light" ? (
+                      <img
+                        className="absolute top-[105px] group-hover:top-[70px]  ease-in-out duration-200"
+                        src="/images/downArrow.svg"
+                        alt=""
+                      />
+                    ) : (
+                      <img
+                        className="absolute h-[60px] top-[105px] group-hover:top-[70px]  ease-in-out duration-200"
+                        src="/images/icons8-arrow-30.png"
+                        alt=""
+                      />
+                    )}
+                  </a>
+                </div>
+              </div> */}
+                
+                <div className="w-full absolute left-0  bottom-[10px] flex justify-center items-end ">
                 <div className="group relative overflow-hidden  h-[230px] mb-[-100px] ">
                   <p className="text-center  font-lato italic pb-5 sm:pb-0 font-bold  sm:my-3 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
                     Works
@@ -350,6 +372,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
+
             </div>
           </SkeletonTheme>
           <CaseStudies />

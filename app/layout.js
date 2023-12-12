@@ -1,9 +1,8 @@
-"use client";
 import Footer from "@/components/front-end/Footer/Footer";
 import Header from "@/components/front-end/Header/Header";
 import "@/styles/globals.css";
-import { ThemeProvider } from "next-themes";
 import TopBtn from "@/components/front-end/TobBtn";
+import { Providers } from "@/utils/ThemeProviders";
 
 export default function RootLayout({ children }) {
   return (
@@ -12,16 +11,21 @@ export default function RootLayout({ children }) {
         <title>Mahdi Hasan Portfolio</title>
       </head>
 
-      <body className="scroll-smooth shadow-summery mx-auto h-auto max-w-[1700px]">
-        <ThemeProvider attribute="class">
-          <>
+      <body className="scroll-smooth shadow-summery mx-auto h-auto w-full">
+        
+          <Providers> 
             <Header />
-            <main>{children}</main>
+          <main>
+            {children}
+          </main>
             <Footer />
             <TopBtn />
-          </>
-        </ThemeProvider>
-      </body>
-    </html>
+            </Providers>
+
+        
+        </body>
+
+      </html>
+
   );
 }
