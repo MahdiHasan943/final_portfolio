@@ -110,7 +110,7 @@ export default function Home() {
                   />
                 </motion.svg>
               </div>
-                <ContactIcon currentTheme={currentTheme}/>
+                {/* <ContactIcon currentTheme={currentTheme}/> */}
                 <WorkHero currentTheme={currentTheme} handleClick={handleClick} />
             </div>
           </SkeletonTheme>
