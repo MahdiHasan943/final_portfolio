@@ -65,25 +65,6 @@ useEffect(() => {
 
   return (
     <>
-      {loading ? (
-        <div className="relative flex justify-center items-center py-20 bg-[#252a60]  h-[100vh] w-full]">
-          <Triangle
-            height="200"
-            width="200"
-            color="#fff"
-            ariaLabel="triangle-loading"
-            wrapperStyle={{}}
-            wrapperClassName=""
-            visible={true}
-          />
-          <motion.div
-            className="h-[100%] w-[100%] absolute top-0 left-0  bg-[#1c1d25]  "
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 1, delay: 1, ease: easeOut }}
-          ></motion.div>
-        </div>
-      ) : (
         <div className="relative">
           <div className="">
             <PopupForm isOpen={isOpen} onClose={handleAboutClick} />
@@ -94,7 +75,7 @@ useEffect(() => {
               id="hero"
               className="relative mother sectionsPadding bg-[white] dark:bg-[#000]  z-[100000px]"
             >
-                <HeroContent loading={loading}  currentTheme={currentTheme}  handleAboutClick={handleAboutClick} />
+                <HeroContent  currentTheme={currentTheme}  handleAboutClick={handleAboutClick} />
               <div className="absolute w-full h-[100vh] flex justify-center items-center">
                 <motion.svg
                   variants={svgVariants}
@@ -130,7 +111,7 @@ useEffect(() => {
           <Experiments />
           <Contact />
         </div>
-      )}
+
     </>
   );
 }

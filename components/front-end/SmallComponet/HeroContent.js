@@ -1,8 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
-const HeroContent = ({ loading, currentTheme,handleAboutClick }) => {
-   
+const HeroContent = ({currentTheme,handleAboutClick }) => {
     useEffect(() => {
         const parallax = (e) => {
           document.querySelectorAll(".layer").forEach((layer) => {
@@ -60,13 +59,13 @@ const HeroContent = ({ loading, currentTheme,handleAboutClick }) => {
                   <div className=" absolute w-full z-50 mt-[-50px] sm:mt-[-150px] ">
                     <div className="sm:pl-[100px]">
                       <h1 className=" font-bold text-[50px] inline  sm:text-[80px] text-[#4c4f65]  dark:text-white font-Arimo leading-[90px] ">
-                        {loading ? (
+                        {/* {loading ? (
                           <div className="w-[full] px-8 sm:w-[600px]">
                             <Skeleton inline={true} w={300} />
                           </div>
-                        ) : (
-                          "Mahdi Hasan"
-                        )}
+                        ) : ( */}
+                          Mahdi Hasan
+                        {/* )} */}
                       </h1>
 
                       <p className="font-lato italic pb-5 sm:pb-0  sm:my-10 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
