@@ -18,6 +18,9 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   const [isOpen, setIsOpen] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   const handleAboutClick = () => {
       setIsOpen(!isOpen);
@@ -25,31 +28,40 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 100);
   }, []);
-  const { systemTheme, theme, setTheme } = useTheme();
+  
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
-  const handleClick = () => {
-    setTimeout(() => {
-      const targetSection = document.querySelector("#case");
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 300); 
-  };
-
-  useEffect(() => {
-    const link = document.querySelector('a[href="#case"]');
-    if (link) {
-      link.addEventListener("click", handleClick);
-
-      return () => {
-        link.removeEventListener("click", handleClick);
-      };
+ const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
     }
-  }, []);
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
+
+const debouncedHandleClick = debounce(() => {
+  const targetSection = document.querySelector("#case");
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }
+}, 300);
+
+useEffect(() => {
+  const link = document.querySelector('a[href="#case"]');
+  if (link) {
+    link.addEventListener("click", debouncedHandleClick);
+
+    return () => {
+      link.removeEventListener("click", debouncedHandleClick);
+    };
+  }
+}, [debouncedHandleClick]);
+
 
   return (
     <>
@@ -111,7 +123,7 @@ export default function Home() {
                 </motion.svg>
               </div>
                 {/* <ContactIcon currentTheme={currentTheme}/> */}
-                <WorkHero currentTheme={currentTheme} handleClick={handleClick} />
+                <WorkHero currentTheme={currentTheme} handleClick={debouncedHandleClick} />
             </div>
           </SkeletonTheme>
           <CaseStudies />
