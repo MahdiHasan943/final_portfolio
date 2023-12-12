@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
 
       <body className="scroll-smooth shadow-summery mx-auto h-auto w-full">
         
-          <Providers> 
+        <Providers> 
             <Header />
           <main>
             {children}

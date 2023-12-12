@@ -65,7 +65,7 @@ useEffect(() => {
 
   return (
     <>
-        <div className="relative">
+        <section className="relative">
           <div className="">
             <PopupForm isOpen={isOpen} onClose={handleAboutClick} />
           </div>
@@ -103,14 +103,14 @@ useEffect(() => {
                   />
                 </motion.svg>
               </div>
-                {/* <ContactIcon currentTheme={currentTheme}/> */}
+                <ContactIcon currentTheme={currentTheme}/>
                 <WorkHero currentTheme={currentTheme} handleClick={debouncedHandleClick} />
             </div>
           </SkeletonTheme>
           <CaseStudies />
           <Experiments />
           <Contact />
-        </div>
+        </section>
 
     </>
   );
