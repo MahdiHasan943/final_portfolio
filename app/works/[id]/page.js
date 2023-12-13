@@ -10,6 +10,7 @@ import {
 } from "@/utils/motion/motion";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const page = ({ params }) => {
   const [loading, setLoading] = useState(true);
@@ -247,7 +248,9 @@ const page = ({ params }) => {
                   </motion.h3>
                 </div>
                 <div className="pt-6 sm:pt-0">
-                  <img
+                    <Image
+                      width={500}
+                      height={500}
                     className="transform mx-auto scale-100 hover:scale-110 transition-transform duration-500"
                     src={filter[0]?.figma}
                     alt=""
