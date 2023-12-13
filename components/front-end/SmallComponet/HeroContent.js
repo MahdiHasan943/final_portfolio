@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 const HeroContent = ({currentTheme,handleAboutClick }) => {
@@ -21,26 +22,34 @@ const HeroContent = ({currentTheme,handleAboutClick }) => {
       
   return (
       <>
-     <div className="grid grid-cols-4 h-[200px]   absolute top-0 ">
-                <img
+     <div className="flex justify-between items-center  w-full h-[200px]   absolute top-0 ">
+        <Image
+          width={300}
+   height={300}
                   src="/images/1.png"
                   data-speed="15"
                   className="layer Img"
                   alt="icon"
                 />
-                <img
+        <Image
+           width={300}
+   height={400}
                   src="/images/2.png"
                   data-speed="5"
                   className="layer Img"
                   alt="icon"
                 />
-                <img
+        <Image
+           width={300}
+   height={400}
                   src="/images/3.png"
                   data-speed="2"
                   className="layer Img"
                   alt="icon"
                 />
-                <img
+        <Image
+           width={300}
+   height={400}
                   src="/images/4.png"
                   data-speed="6"
                   className="layer Img"
@@ -49,7 +58,9 @@ const HeroContent = ({currentTheme,handleAboutClick }) => {
               </div> 
               <div className="grid grid-cols-4 h-[200px]   absolute top-[40%]">
                 <div className="col-span-2 ">
-                  <img
+          <Image
+                    width={300}
+                    height={400}
                     src="/images/5.png"
                     data-speed="30"
                     className="layer mt-[-30px] w-[300px]"
@@ -111,13 +122,17 @@ const HeroContent = ({currentTheme,handleAboutClick }) => {
                   </div>
                 </div>
 
-                <img
+        <Image
+                  width={300}
+                  height={400}
                   src="/images/7.png"
                   data-speed="4"
                   className="layer"
                   alt="icon"
                 />
-                <img
+        <Image
+                  width={300}
+                  height={400}
                   src="/images/8.png"
                   data-speed="-9"
                   className="layer"
@@ -125,27 +140,35 @@ const HeroContent = ({currentTheme,handleAboutClick }) => {
                 />
               </div> 
 
-         <div className="grid grid-cols-4 h-[200px]   absolute bottom-0  ">
-                <img
+         <div className="flex justify-between items-center  w-full h-[200px]   absolute bottom-0  ">
+        <Image
+                  width={300}
+                  height={400}
                   src="/images/9.png"
                   data-speed="-16"
                   className="ml-[-100px] layer"
                   alt="icon"
                 />
-                <img
+        <Image
+                  width={300}
+                  height={400}
                   src="/images/10.png"
                   data-speed="-7"
                   className="layer"
                   alt="icon"
                 />
-                <img
+        <Image
+                  width={300}
+                  height={400}
                   src="/images/6.png"
                   data-speed="-2"
                   className="layer"
                   alt="icon"
                 />
 
-                <img
+        <Image
+                  width={300}
+                  height={400}
                   src="/images/12.png"
                   data-speed="5"
                   className="layer"

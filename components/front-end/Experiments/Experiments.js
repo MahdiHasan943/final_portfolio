@@ -65,7 +65,7 @@ const Experiments = () => {
               <div className="flex w-full h-full justify-center items-center">
                 <div
                   className="  w-[250px] group-hover:w-[280px] group-hover:h-[280px] ease-in-out duration-200  h-[250px] bg-center bg-cover rounded-full"
-                  style={{ backgroundImage: "url(/images/codepen-loader.gif)" }}
+                  style={{ backgroundImage: "url(/images/codepen-loader.webp)" }}
                 ></div>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Experiments = () => {
               <div className="flex w-full h-full justify-center items-center">
                 <div
                   className="  w-[250px] group-hover:w-[300px] group-hover:h-[300px] ease-in-out duration-200  h-[250px] bg-center bg-cover rounded-full"
-                  style={{ backgroundImage: "url(/images/search-context.gif)" }}
+                  style={{ backgroundImage: "url(/images/search_.webp)" }}
                 ></div>
               </div>
             </div>
@@ -89,7 +89,7 @@ const Experiments = () => {
               <div className="flex w-full h-full justify-center items-center">
                 <div
                   className="  w-[250px] h-[250px] group-hover:w-[300px] group-hover:h-[300px] ease-in-out duration-200  bg-center bg-cover rounded-full"
-                  style={{ backgroundImage: "url(/images/brick.png)" }}
+                  style={{ backgroundImage: "url(/images/brick.webp)" }}
                 ></div>
               </div>
             </div>
@@ -101,7 +101,7 @@ const Experiments = () => {
               <div className="flex w-full h-full justify-center items-center">
                 <div
                   className="group-hover:w-[300px] group-hover:h-[300px]  ease-in-out duration-200 w-[250px] h-[250px] lg:w-[200px] lg:h-[200px]   xl:w-[250px] xl:h-[250px] bg-center bg-cover rounded-full"
-                  style={{ backgroundImage: "url(/images/x-times.gif)" }}
+                  style={{ backgroundImage: "url(/images/x-times.webp)" }}
                 ></div>
               </div>
             </div>

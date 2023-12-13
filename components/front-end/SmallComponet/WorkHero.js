@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const WorkHero = ({handleClick,currentTheme}) => {
@@ -7,7 +8,9 @@ const WorkHero = ({handleClick,currentTheme}) => {
       <p className="text-center  font-lato italic pb-5 sm:pb-0 font-bold  sm:my-3 text-[#5b5e73] dark:text-white text-[24px] leading-[30px]">
         Works
       </p>
-      <img
+        <Image
+          width={100}
+          height={70}
         onClick={handleClick}
         className="absolute top-[105px] group-hover:top-[70px] dark:h-[70px]  ease-in-out duration-200"
         src={
@@ -15,7 +18,7 @@ const WorkHero = ({handleClick,currentTheme}) => {
             ? "/images/downArrow.svg"
             : "/images/icons8-arrow-30.png"
         }
-        alt="downarrow"
+        alt="down arrow"
       />
     </div>
   </div>

@@ -26,8 +26,8 @@ const Footer = () => {
     },
   ];
   return (
-    <section className="sectionsPadding bg-[#202128]">
-      <div className="py-10 ">
+    <section className="sectionsPadding py-10 bg-[#202128]">
+      
         <div className="flex justify-center text-center w-[100px] mx-auto">
           <img className="my-4" src="/images/fM.png" alt="" />
         </div>
@@ -55,7 +55,7 @@ const Footer = () => {
         <p className="text-center text-[#fafafa] text-[16px] mt-4">
           @2023 ClearTouch Design | All Rights Reserved.
         </p>
-      </div>
+      
     </section>
   );
 };

@@ -7,6 +7,7 @@ import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import PopupForm from "../about/PopupForm ";
+import Image from "next/image";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -139,8 +140,10 @@ function Header() {
             navToggle();
           }}
         >
-          <img
-            className="origin-center  w-[30px] h-[30px]"
+          <Image
+                    width={30}
+                    height={30}
+            className="origin-center "
             src="/images/LIGHT.png"
             alt=""
           />
@@ -153,7 +156,9 @@ function Header() {
             navToggle();
           }}
         >
-          <img
+            <Image
+                 width={30}
+                 height={30}
             className="origin-center  w-[30px] h-[30px]"
             src="/images/icons8-dark-mode-30.png"
             alt=""
