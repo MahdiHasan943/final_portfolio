@@ -37,12 +37,12 @@ function Header() {
   const navLink = [
     {
       title: "CaseStudies",
-      ref: "#case",
+      ref: "/#case",
       activeColor: "Cse",
     },
     {
       title: "          Experiments      ",
-      ref: "#exp",
+      ref: "/#exp",
       activeColor: "Experiments",
     },
     // {
@@ -51,14 +51,27 @@ function Header() {
     //   activeColor: "Skills",
     // },
   ];
-  const handleClick = (targetHref) => {
-    setTimeout(() => {
+// ... (existing code)
+
+const handleClick = (targetHref) => {
+  setTimeout(() => {
+    // Check if the link is an internal link (starts with '#')
+    if (targetHref.startsWith("#")) {
       const targetSection = document.querySelector(targetHref);
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.error(`Element with selector '${targetHref}' not found.`);
       }
-    }, 300); // Delay for 0.3 seconds (300 milliseconds) before scrolling
-  };
+    } else {
+      // If the link is external, navigate to the targetHref directly
+      window.location.href = targetHref;
+    }
+  }, 300); // Delay for 0.3 seconds (300 milliseconds) before scrolling
+};
+
+//
+
   useEffect(() => {
     window.addEventListener('scroll', stickNavbar);
     return () => window.removeEventListener('scroll', stickNavbar);
